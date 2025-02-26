@@ -38,8 +38,25 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Understanding what different packages are used for
 
 axios - asynchronous api calls
+
 formik - for forms input handling and event handling like onchange, on submit and all
+
 yup - for fomr validation
+
 shadcn for components like modals, breadcrumbs and so on.
+
 lucide-react - for icons
+
 zustand - for handling global states
+
+## Understanding what specific folders are for
+
+app folder: this is the main folder where most of our other folders would be
+
+services folder: this is folder includes services like all our endpoints calling to the backend(the api subfolder) and others
+
+store: this is the store folder
+
+utils: this folder includes files for specific modules
+
+components folder: There are two, the one outside the app folder belongs to shadcn compoenents and the one inside is for any reusabe components we might have
