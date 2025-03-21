@@ -28,7 +28,7 @@ const Hero = () => {
             Send Money Seamlessly Across Borders
           </Text>
           <Text fontWeight={"medium"} py="20px" maxW={"500px"}>
-            Our industry-leading technology protects your money and guarantees
+            Our industry-leading technology protects your money andguarantees
             it arrives safely everytime
           </Text>
           <Flex>
