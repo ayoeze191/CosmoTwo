@@ -5,7 +5,7 @@ import { CustomButton } from "./CustomButton";
 import { IoLockClosedOutline } from "react-icons/io5";
 import logo from "../assets/logo.png"
 
-const  Navigation =({bg, color, iconColor,loginColor, loginTextColor})=> {
+const  Navigation =({bg, color, iconColor,loginColor, loginTextColor, border})=> {
   return (
     <Flex
       alignItems={"center"}
@@ -16,6 +16,7 @@ const  Navigation =({bg, color, iconColor,loginColor, loginTextColor})=> {
       fontSize={[".9em", "1.1em"]}
       flexDir={"row"}
       bg={bg ||"white" }
+      border={border}
       gap={["20px", "20px", "20px", "unset"]}
       // p="20px 150px"
       p={["20px 30px", "20px 30px", "20px 30px", "20px 20px"]}
@@ -44,10 +45,10 @@ const  Navigation =({bg, color, iconColor,loginColor, loginTextColor})=> {
           <Link to={"/pricing"}>
             <Text color={color} fontSize={"13px"} fontWeight={"bold"}>Contact us</Text>
           </Link>
-          <Link to={"/pricing"}>
+          <Link to={"/faq"}>
             <Text color={color} fontSize={"13px"} fontWeight={"bold"}>FAQ</Text>
           </Link>
-          <Link to={"/pricing"}>
+          <Link to={"/help-center"}>
             <Text color={color} fontSize={"13px"} fontWeight={"bold"}>Help center</Text>
           </Link>
         </Flex>
