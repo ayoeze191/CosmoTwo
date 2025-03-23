@@ -17,17 +17,16 @@ const Hero = () => {
   const [receiveCurrency, setReceiveCurrency] = useState("NGN");
 
   const exchangeRates = {
-    AUD: { NGN: 250, USD: 0.65, EUR: 0.6, GBP: 0.55 }, // AUD to other currencies
-    USD: { NGN: 750, AUD: 1.54, EUR: 0.9, GBP: 0.8 }, // USD to other currencies
-    EUR: { NGN: 900, AUD: 1.66, USD: 1.11, GBP: 0.88 }, // EUR to other currencies
-    GBP: { NGN: 1000, AUD: 1.82, USD: 1.25, EUR: 1.13 }, // GBP to other currencies
-    NGN: { AUD: 0.004, USD: 0.0013, EUR: 0.0011, GBP: 0.001 }, // NGN to other currencies
+    AUD: { NGN: 250, USD: 0.65, EUR: 0.6, GBP: 0.55 }, 
+    USD: { NGN: 750, AUD: 1.54, EUR: 0.9, GBP: 0.8 }, 
+    EUR: { NGN: 900, AUD: 1.66, USD: 1.11, GBP: 0.88 },
+    GBP: { NGN: 1000, AUD: 1.82, USD: 1.25, EUR: 1.13 }, 
+    NGN: { AUD: 0.004, USD: 0.0013, EUR: 0.0011, GBP: 0.001 },
   };
   const handleSendAmountChange = (e) => {
     const amount = parseFloat(e.target.value);
     setSendAmount(amount);
 
-    // Convert the send amount using the selected send and receive currencies
     const conversionRate = exchangeRates[sendCurrency]?.[receiveCurrency] || 1;
     setConvertedAmount(amount * conversionRate);
   };
@@ -35,7 +34,6 @@ const Hero = () => {
     const selectedSendCurrency = e.target.value;
     setSendCurrency(selectedSendCurrency);
 
-    // Recalculate the converted amount when the send currency changes
     const conversionRate = exchangeRates[selectedSendCurrency]?.[receiveCurrency] || 1;
     setConvertedAmount(sendAmount * conversionRate);
   };
@@ -43,44 +41,43 @@ const Hero = () => {
     const selectedReceiveCurrency = e.target.value;
     setReceiveCurrency(selectedReceiveCurrency);
 
-    // Recalculate the converted amount when the receive currency changes
     const conversionRate = exchangeRates[sendCurrency]?.[selectedReceiveCurrency] || 1;
     setConvertedAmount(sendAmount * conversionRate);
   };
   const getCurrencyFlag = (currency) => {
     switch (currency) {
       case 'AUD':
-        return aud; // Flag for AUD
+        return aud; 
       case 'USD':
-        return usa; // Flag for USD
+        return usa; 
       case 'EUR':
-        return uk; // Flag for EUR
+        return uk; 
       case 'GBP':
-        return uk; // Flag for GBP
+        return uk; 
       default:
-        return aud; // Default flag
+        return aud; 
     }
   };
   const recieveCurrencyFlag = (currency) => {
     switch (currency) {
       case 'NGN':
-        return naija; // Flag for naij
+        return naija; 
       case 'AUD':
-        return aud; // Flag for AUD
+        return aud; 
       case 'USD':
-        return usa; // Flag for USD
+        return usa;
       case 'EUR':
-        return uk; // Flag for EUR
+        return uk; 
       case 'GBP':
-        return uk; // Flag for GBP
+        return uk; 
       default:
-        return naija; // Default flag
+        return naija; 
     }
   };
 
   return (
     <Box
-      p={["20px 30px", "20px 30px", "20px 30px", "30px 150px"]}
+      p={["20px 20px", "20px 20px", "20px 20px", "30px 150px"]}
       bgImage={Bg}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
@@ -89,28 +86,31 @@ const Hero = () => {
     >
       <Navigation />
 
-      <Flex mt="100px"justify={"center"} gap={"50px"} align={"center"}>
+      <Flex mt={["50px","50px","50px","100px"]} justify={"center"} gap={"50px"} align={["start","start","start","center"]} flexDir={["column","column","column","row"]}>
         <Box color={"#fff"}>
+          <Flex justify={["center","center","center","start"]}>
+
+          
           <CustomButton
            leftIcon={<Image src={shield} />}
             btnText={"Regulated by AUSTRAC"}
             bg={"none"}
             border={"1px solid white"}
             borderRadius={"50px"}
-          />
-          <Text fontSize={"50px"} fontWeight={"bold"} maxW={"500px"} pt="30px">
+          /></Flex>
+          <Text fontSize={["40px","40px","40px","50px"]} fontWeight={"bold"} maxW={["","","","500px"]} pt="30px" textAlign={["center","center","center","start"]}>
             Send Money Seamlessly Across Borders
           </Text>
-          <Text fontWeight={"medium"} py="20px" maxW={"500px"}>
+          <Text fontWeight={"medium"} py="20px"  maxW={["","","","500px"]} textAlign={["center","center","center","start"]}>
             Our industry-leading technology protects your money andguarantees
             it arrives safely everytime
           </Text>
-          <Flex>
+          <Flex justify={["center","center","center","start"]}>
             <CustomButton btnText={"Sign-in to get started"} borderRadius={"50px"} px={"30px"} rightIcon={<GoArrowUpRight />}/>
           </Flex>
         </Box>
 
-        <Box p={"20px"} bg={"#fff"} borderRadius={"10px"} flex={0.6} boxShadow="0 4px 30px rgba(255, 255, 255, 0.9)">
+        <Box p={"20px"} margin={["0px auto","0px auto","0px auto","0px"]} bg={"#fff"} borderRadius={"10px"} flex={0.6} boxShadow="0 4px 30px rgba(255, 255, 255, 0.9)">
             <Text textAlign={"center"} color={"#FF0000"}>Best rate guarantee | <span style={{fontWeight:"bold"}}>New customer rate-980 NGN</span></Text>
             <Flex justify={"center"}>
                 <Text bg={"#FFE6E6"} px={"10px"} color={"#FF0000"} borderRadius={"50px"}><span style={{fontWeight:"500"}}>Rate</span> - 1 AUD = 985 NGN</Text>
@@ -125,11 +125,11 @@ const Hero = () => {
                     placeholder='0.00' 
                     value={sendAmount}
                     onChange={handleSendAmountChange}
-                    type="number" // Ensure only numbers are entered
+                    type="number" 
                     />
                 </Box>
                 <Box border={"1px solid #656565"} borderRadius={"50px"} px="30px">
-                  <Flex align="center">
+                  <Flex align="center" >
                   <Image src={getCurrencyFlag(sendCurrency)} alt="currency flag" boxSize="20px" mr="10px" />
                 <Select 
                 value={sendCurrency} 

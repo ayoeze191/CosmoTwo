@@ -1,12 +1,13 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box } from '@chakra-ui/react'
 import React from 'react'
 import { faqs } from '../DummyData'
+import { FiPlus } from "react-icons/fi";
 
 const General = () => {
   return (
    <Box w={"full"}>
           {faqs.map((faq, index) => (
-            <Accordion w={"50%"} m={"0px auto"} key={index} allowMultiple>
+            <Accordion w={["100%","100%","100%","50%"]} m={"0px auto"} key={index} allowMultiple>
               <AccordionItem
                 bg={"#F1F9F8"}
                 rounded={"lg"}
@@ -26,7 +27,7 @@ const General = () => {
                     >
                       {faq.question}
                     </Box>
-                    <AccordionIcon />
+                    <FiPlus />
                   </AccordionButton>
                 <AccordionPanel pb={4} fontSize={"15px"}>
                   {faq.answer}

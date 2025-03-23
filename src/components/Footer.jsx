@@ -10,17 +10,19 @@ import internet from "../assets/internet.png"
 
 const Footer = () => {
   return (
-    <Box p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]} bg={"#000"} color={"#fff"}>
+    <Box p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]} bg={"#000"} color={"#fff"}>
         <Text fontWeight={"bold"} fontSize={"30px"}>CosmoRemit</Text>
         <Text fontSize={"15px"}>Fintech solution</Text>
         <Flex justify={"flex-end"} mb="20px">
             <Box>
             <Text fontSize={"15px"}>We are a proud member of</Text>
+            <Flex justify={"center"} mt="10px">
             <Image src={pm} h="50px" />
+            </Flex>
             </Box>
         </Flex>
         <Divider />
-        <Flex my="30px" justify={"space-between"} mx="30px">
+        <Flex my="30px" justify={"space-between"} mx="30px" flexWrap={"wrap"}>
             <Box w={"300px"}>
                 <Flex justify={"center"} gap={5} align={"center"} bg={"#fff"} p="10px" borderRadius={"8px"} textAlign={"center"} mb="20px">
                     <Image src={location}  h={"30px"}/>
@@ -47,7 +49,7 @@ const Footer = () => {
                 <Text>admin@cosmoremit.com.au</Text>
             </Box>
 
-            <Box w={"300px"}>
+            <Box w={"300px"} my={["30px","30px","30px","0px"]}>
                 <Flex justify={"center"} gap={5} align={"center"} bg={"#fff"} p="10px" borderRadius={"8px"} textAlign={"center"} mb="20px">
                 <Image src={location}  h={"30px"}/>
                     <Text color={"#000"} fontWeight={"medium"}>New Zealand Contact Info</Text>
@@ -88,7 +90,7 @@ const Footer = () => {
 
         </Flex>
         <Divider />
-        <Flex justify={"center"} gap={"50px"} mt="20px">
+        <Flex justify={"center"} gap={"50px"} mt="20px" flexWrap={"wrap"}>
             <Text>2025 @Cosmoremit</Text>
             <Text>Privacy Policy</Text>
             <Text>Terms & Conditions</Text>

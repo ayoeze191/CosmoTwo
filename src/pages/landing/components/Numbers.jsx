@@ -7,10 +7,11 @@ import youtube from "../../../assets/youtube.png"
 const Numbers = () => {
   return (
     <Flex 
-    p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
+    p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}
     bg={"#fff"}
-    justifyContent={"center"}
-    gap={"100px"}
+    justifyContent={["center"]}
+    flexWrap={"wrap"}
+    gap={["30px","30px","30px","100px"]}
     >
         <Box>
             <Image src={pounds} />

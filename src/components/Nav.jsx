@@ -25,11 +25,11 @@ const  Navigation =({bg, color, iconColor,loginColor, loginTextColor, border})=>
     >
       <Link to={"/"}>
         <Flex gap={"2"} alignItems={"center"}>
-          <Img loading="lazy" src={logo} alt="logo" h={"30px"} />
+          <Img loading="lazy" src={logo} alt="logo" h={["20px","20px","20px","30px"]} />
         </Flex>
       </Link>
 
-      <MobileHamBugerNav display={["block", "block", "block", "none"]} />
+      <MobileHamBugerNav display={["block", "block", "block", "none"]} color={color} />
       <>
         <Flex
           display={["none", "none", "none", "flex"]}

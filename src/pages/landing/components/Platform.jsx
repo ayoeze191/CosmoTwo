@@ -8,11 +8,11 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Platform = () => {
   return (
-    <Box p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]} bg={"#fff"}>
+    <Box p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]} bg={"#fff"}>
       <Text fontSize={"30px"} fontWeight={"bold"} textAlign={"center"}>
         The only platform you need for your
       </Text>
-      <Flex mt="50px" justifyContent={"center"} align={"center"} gap={"100px"}>
+      <Flex mt="50px" justifyContent={["center"]} flexDir={["column","column","column","row"]} align={["center"]} gap={["30px","30px","30px","100px"]}>
         <Box>
           <Text fontSize={"20px"} fontWeight={"bold"}>
             Fast & Secure Transfers
@@ -36,7 +36,7 @@ const Platform = () => {
         </Box>
       </Flex>
 
-      <Flex mt="50px" justifyContent={"center"} align={"center"} gap={"100px"}>
+      <Flex mt="50px" justifyContent={"center"} flexDir={["column-reverse","column","column","row"]} align={["center"]} gap={["30px","30px","30px","100px"]}>
         <Box>
           <Image src={p2} h={"400px"} borderRadius={"10px"} />
         </Box>
@@ -59,7 +59,7 @@ const Platform = () => {
         </Box>
       </Flex>
 
-      <Flex mt="50px" justifyContent={"center"} align={"center"} gap={"100px"}>
+      <Flex mt="50px" justifyContent={"center"}  flexDir={["column","column","column","row"]} align={["center"]} gap={["30px","30px","30px","100px"]}>
         <Box>
           <Text fontSize={"20px"} fontWeight={"bold"}>
             Multiple Payment Options

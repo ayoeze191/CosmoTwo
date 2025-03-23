@@ -43,7 +43,7 @@ import dc from "../../../assets/dc.png"
 const Countries = () => {
   return (
     <Box
-      p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
+      p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}
       bgImage={map}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
@@ -66,7 +66,7 @@ const Countries = () => {
       </Box>
       <Flex flexDir={"column"} margin={"0px auto"} maxW={"900px"}>
         <Text color={"#FF0000"} fontWeight={"bold"}>Europe</Text>
-        <Flex mt="10px" gap={"50px"}>
+        <Flex mt="10px" gap={["10px","10px","10px","50px"]} flexWrap={"wrap"}>
             <HStack spacing={2} bg={"#FFE6E6"} borderRadius={"50px"} border={"1px solid #FF0000"} px="10px" py={"5px"} w={"120px"} justify={"center"}>
                 <Image src={Malta} h={"15px"}/>
                 <Text fontSize={"14px"}>Malta</Text>
@@ -93,7 +93,7 @@ const Countries = () => {
 
       <Flex flexDir={"column"} margin={"0px auto"} maxW={"900px"} mt="30px">
         <Text color={"#296F63"} fontWeight={"bold"}>Africa</Text>
-        <Flex mt="10px" gap={"50px"}>
+        <Flex mt="10px"  gap={["10px","10px","10px","50px"]} flexWrap={"wrap"}>
             <HStack spacing={2} borderRadius={"50px"} border={"1px solid #296F63"} px="10px" py={"5px"} w={"120px"} justify={"center"}>
                 <Image src={naija} h={"15px"}/>
                 <Text fontSize={"14px"}>Nigeria</Text>
@@ -116,7 +116,7 @@ const Countries = () => {
                 <Text fontSize={"14px"}>Mauritius</Text>
             </HStack>
         </Flex>
-        <Flex mt="10px" gap={"50px"}>
+        <Flex mt="10px"  gap={["10px","10px","10px","50px"]} flexWrap={"wrap"}>
             <HStack spacing={2} borderRadius={"50px"} border={"1px solid #296F63"} px="10px" py={"5px"} w={"120px"} justify={"center"}>
                 <Image src={Kenya} h={"15px"}/>
                 <Text fontSize={"14px"}>Kenya</Text>
@@ -139,7 +139,7 @@ const Countries = () => {
 
       <Flex flexDir={"column"} margin={"0px auto"} maxW={"900px"} mt="30px">
         <Text color={"#0C4569"} fontWeight={"bold"}>Asia</Text>
-        <Flex mt="10px" gap={"50px"}>
+        <Flex mt="10px" gap={["10px","10px","10px","50px"]} flexWrap={"wrap"}>
             <HStack spacing={2} borderRadius={"50px"} border={"1px solid #0C4569"} px="10px" py={"5px"} w={"120px"} justify={"center"}>
                 <Image src={China} h={"15px"}/>
                 <Text fontSize={"14px"}>China</Text>
@@ -162,7 +162,7 @@ const Countries = () => {
                 <Text fontSize={"14px"}>Sri Lanka</Text>
             </HStack>
         </Flex>
-        <Flex mt="10px" gap={"50px"}>
+        <Flex mt="10px" gap={["10px","10px","10px","50px"]} flexWrap={"wrap"}>
             <HStack spacing={2} borderRadius={"50px"} border={"1px solid #296F63"} px="10px" py={"5px"} w={"120px"} justify={"center"}>
                 <Image src={India} h={"15px"}/>
                 <Text fontSize={"14px"}>India</Text>
@@ -185,7 +185,7 @@ const Countries = () => {
 
       <Flex flexDir={"column"} margin={"0px auto"} maxW={"900px"} mt="30px">
         <Text color={"#000080"} fontWeight={"bold"}>North and South America</Text>
-        <Flex mt="10px" gap={"50px"}>
+        <Flex mt="10px" gap={["10px","10px","10px","50px"]} flexWrap={"wrap"}>
             <HStack spacing={2} bg={"#E6E6F2"} borderRadius={"50px"} border={"1px solid #000080"} px="10px" py={"5px"} w={"120px"} justify={"center"}>
                 <Image src={Argentina} h={"15px"}/>
                 <Text fontSize={"14px"}>Argentina</Text>
@@ -210,7 +210,7 @@ const Countries = () => {
 
       <Flex flexDir={"column"} margin={"0px auto"} maxW={"900px"} mt="30px">
         <Text color={"#F07400"} fontWeight={"bold"}>Oceania</Text>
-        <Flex mt="10px" gap={"50px"}>
+        <Flex mt="10px" gap={["10px","10px","10px","50px"]} flexWrap={"wrap"}>
             <HStack spacing={2} bg={"#FEF1E6"} borderRadius={"50px"} border={"1px solid #F07400"} px="10px" py={"5px"} w={"120px"} justify={"center"}>
                 <Image src={fiji} h={"15px"}/>
                 <Text fontSize={"14px"}>Fiji</Text>
@@ -240,7 +240,7 @@ const Countries = () => {
 
       <Flex flexDir={"column"} margin={"0px auto"} maxW={"900px"} mt="30px">
         <Text color={"#F00098"} fontWeight={"bold"}>Other Countries</Text>
-        <Flex mt="10px" gap={"50px"}>
+        <Flex mt="10px" gap={["10px","10px","10px","50px"]} flexWrap={"wrap"}>
             <HStack spacing={2} bg={"#FEE6F5"}  borderRadius={"50px"} border={"1px solid #F00098"} px="10px" py={"5px"} w={"130px"} justify={"center"}>
                 <Image src={honkkong} h={"15px"}/>
                 <Text fontSize={"14px"}>Hong Kong</Text>

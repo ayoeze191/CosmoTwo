@@ -45,18 +45,18 @@ const Country = () => {
 
   return (
     <Box
-      p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
+      p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}
       //   bgImage={Bg}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
       // h={"700px"}
     >
-        <Flex align={"center"} justify={"center"} gap={"50px"}>
+        <Flex align={"center"} justify={"center"} gap={"50px"} flexDir={["column","column","column","row"]} >
 
         <Box>
-         <Text fontWeight={"bold"} fontSize={"30px"} maxW={"300px"}>What our 10,000+ users have to say</Text>
-         <HStack spacing={5} mt="50px">
+         <Text fontWeight={"bold"} fontSize={"30px"} maxW={"300px"} textAlign={["center","center","center","start"]}>What our 10,000+ users have to say</Text>
+         <HStack spacing={5} mt="50px" justify={["center","start","start","start"]}>
         <Button
           transform="translateY(-50%)"
           onClick={prevImage}
@@ -87,17 +87,17 @@ const Country = () => {
      
 
       <Box
-        width="500px"
+        width={["350px","500px"]}
         height="400px"
         px={"10px"}
         overflow="hidden"
         borderRadius="30px"
         boxShadow="lg"
         color={"#fff"}
-        bg={"red"}
+        bg={"#FF0000"}
       >
         <Flex
-          width="100%"
+          // width="100%"
           height="100%"
           transition="transform 0.5s ease-in-out"
           transform={`translateX(-${currentIndex * 100}%)`}
