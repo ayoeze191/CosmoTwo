@@ -13,6 +13,11 @@ import headset from "../../../assets/headset.png";
 import phone from "../../../assets/phone.png";
 import livechat from "../../../assets/livechat.png";
 import person from "../../../assets/person.png";
+import send from "../../../assets/send.png";
+import limit from "../../../assets/limit.png";
+import bonus from "../../../assets/bonus.png";
+import referral from "../../../assets/referral.png";
+import privacy from "../../../assets/privacy.png";
 
 const Questions = () => {
   const [tabToShow, setTabToShow] = useState("general");
@@ -50,7 +55,7 @@ const Questions = () => {
         </Box>
         <Box bg={"#eee"} borderRadius={"10px"} textAlign={"center"} p={"30px"}>
           <Flex justify={"center"}>
-            <Image src={person} h={"50px"} />
+            <Image src={send} h={"50px"} />
           </Flex>
           <Text fontWeight={"bold"} fontSize={"20px"} py="20px">
             Sending Money
@@ -62,7 +67,7 @@ const Questions = () => {
         </Box>
         <Box bg={"#eee"} borderRadius={"10px"} textAlign={"center"} p={"30px"}>
           <Flex justify={"center"}>
-            <Image src={person} h={"50px"} />
+            <Image src={limit} h={"50px"} />
           </Flex>
           <Text fontWeight={"bold"} fontSize={"20px"} py="20px">
             Increasing Limit
@@ -76,7 +81,7 @@ const Questions = () => {
       <Flex justify={"center"} my="30px" gap={"50px"}>
         <Box bg={"#eee"} borderRadius={"10px"} textAlign={"center"} p={"30px"}>
           <Flex justify={"center"}>
-            <Image src={person} h={"50px"} />
+            <Image src={bonus} h={"50px"} />
           </Flex>
           <Text fontWeight={"bold"} fontSize={"20px"} py="20px">
             Transaction Bonus
@@ -88,7 +93,7 @@ const Questions = () => {
         </Box>
         <Box bg={"#eee"} borderRadius={"10px"} textAlign={"center"} p={"30px"}>
           <Flex justify={"center"}>
-            <Image src={person} h={"50px"} />
+            <Image src={referral} h={"50px"} />
           </Flex>
           <Text fontWeight={"bold"} fontSize={"20px"} py="20px">
             Referral
@@ -100,7 +105,7 @@ const Questions = () => {
         </Box>
         <Box bg={"#eee"} borderRadius={"10px"} textAlign={"center"} p={"30px"}>
           <Flex justify={"center"}>
-            <Image src={person} h={"50px"} />
+            <Image src={privacy} h={"50px"} />
           </Flex>
           <Text fontWeight={"bold"} fontSize={"20px"} py="20px">
             Privacy Policy

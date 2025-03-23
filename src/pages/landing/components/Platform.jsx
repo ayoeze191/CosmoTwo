@@ -4,6 +4,7 @@ import { CustomButton } from "../../../components/CustomButton";
 import p1 from "../../../assets/p1.png";
 import p2 from "../../../assets/p2.png";
 import p3 from "../../../assets/p3.png";
+import { GoArrowUpRight } from "react-icons/go";
 
 const Platform = () => {
   return (
@@ -24,7 +25,9 @@ const Platform = () => {
             btnText={"sign-in to get started"}
             bg={"none"}
             color={"#296F63"}
+            fontWeight="bold"
             px={"0px"}
+            rightIcon={<GoArrowUpRight/>}
           />
         </Box>
 
@@ -49,6 +52,8 @@ const Platform = () => {
             btnText={"sign-in to get started"}
             bg={"none"}
             color={"#296F63"}
+            rightIcon={<GoArrowUpRight/>}
+            fontWeight="bold"
             px={"0px"}
           />
         </Box>
@@ -67,6 +72,8 @@ const Platform = () => {
             btnText={"sign-in to get started"}
             bg={"none"}
             color={"#296F63"}
+            rightIcon={<GoArrowUpRight/>}
+            fontWeight="bold"
             px={"0px"}
           />
         </Box>

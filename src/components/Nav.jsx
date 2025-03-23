@@ -4,6 +4,7 @@ import MobileHamBugerNav from "./MobileHamBurgerNav";
 import { CustomButton } from "./CustomButton";
 import { IoLockClosedOutline } from "react-icons/io5";
 import logo from "../assets/logo.png"
+import { GoArrowUpRight } from "react-icons/go";
 
 const  Navigation =({bg, color, iconColor,loginColor, loginTextColor, border})=> {
   return (
@@ -39,10 +40,10 @@ const  Navigation =({bg, color, iconColor,loginColor, loginTextColor, border})=>
            <Link to={"/"}>
             <Text color={color} fontSize={"13px"} fontWeight={"bold"}>Home</Text>
           </Link>
-          <Link to={"/pricing"}>
+          <Link to={"/about-us"}>
             <Text color={color} fontSize={"13px"} fontWeight={"bold"}>About us</Text>
           </Link>
-          <Link to={"/pricing"}>
+          <Link to={"/contact-us"}>
             <Text color={color} fontSize={"13px"} fontWeight={"bold"}>Contact us</Text>
           </Link>
           <Link to={"/faq"}>
@@ -59,11 +60,12 @@ const  Navigation =({bg, color, iconColor,loginColor, loginTextColor, border})=>
         >
           <CustomButton
             color={loginTextColor}
+            rightIcon={<GoArrowUpRight />}
             borderRadius="50px"
             btnText={"Sign-in"}
             // px="35px"
             bg={"red"}
-            leftIcon={<IoLockClosedOutline color={loginColor} />}
+            // leftIcon={<IoLockClosedOutline color={loginColor} />}
           />
         </Flex>
       </>

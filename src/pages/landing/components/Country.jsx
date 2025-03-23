@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Image, VStack, Text, Flex, HStack } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { GoArrowRight } from "react-icons/go";
+import { GoArrowLeft } from "react-icons/go";
 
 const Country = () => {
   const carouselData = [
@@ -39,20 +41,16 @@ const Country = () => {
     );
   };
 
-  // Optional: Auto-slide every 3 seconds
-  //   useEffect(() => {
-  //     const intervalId = setInterval(nextImage, 3000); // Auto change every 3 seconds
-  //     return () => clearInterval(intervalId); // Clean up on unmount
-  //   }, []);
+ 
 
   return (
     <Box
-      p={["20px 30px", "20px 30px", "20px 30px", "20px 150px"]}
+      p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
       //   bgImage={Bg}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
-      h={"700px"}
+      // h={"700px"}
     >
         <Flex align={"center"} justify={"center"} gap={"50px"}>
 
@@ -62,6 +60,7 @@ const Country = () => {
         <Button
           transform="translateY(-50%)"
           onClick={prevImage}
+          borderRadius={"50px"}
           variant="unstyled"
           color="white"
           bg="rgba(0, 0, 0, 0.5)"
@@ -73,6 +72,7 @@ const Country = () => {
         <Button
           transform="translateY(-50%)"
           onClick={nextImage}
+          borderRadius={"50px"}
           variant="unstyled"
           color="white"
           bg="rgba(0, 0, 0, 0.5)"

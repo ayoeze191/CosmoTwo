@@ -10,7 +10,7 @@ const International = () => {
       align={"center"}
       h={"300px"}
     >
-        <Text fontSize={"30px"} fontWeight={"bold"}>You can now send money <span style={{color:"red", textTransform:"uppercase"}}>internationally</span> in these currencies</Text>
+        <Text fontSize={"30px"} fontWeight={"bold"}>You can now send money <span style={{color:"red", fontWeight:"1000px", textTransform:"uppercase"}}>internationally</span> in these currencies</Text>
     </Flex>
   );
 };

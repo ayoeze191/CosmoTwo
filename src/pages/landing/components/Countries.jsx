@@ -43,7 +43,7 @@ import dc from "../../../assets/dc.png"
 const Countries = () => {
   return (
     <Box
-      p={["20px 30px", "20px 30px", "20px 30px", "20px 150px"]}
+      p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
       bgImage={map}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
@@ -56,13 +56,13 @@ const Countries = () => {
           <span style={{ color: "#FF0000" }}>EASILY </span>and{" "}
           <span style={{ color: "#000080" }}> SWIFTLY</span>
         </Text>
-        <Text color={"#656565"} maxWidth={"900px"} margin={"0px auto"}>
+        <Text color={"#656565"} maxWidth={"950px"} margin={"0px auto"}>
           With <span style={{fontWeight:"bold"}}>CosmoRemit,</span>  you can send money to friends, family, and business
           partners across the globe quickly and securely. We support
           international money transfers to a wide range of countries, ensuring
           that your funds arrive safely and on time.
         </Text>
-        <Text color={"#656565"} py="30px">Here are some of the key destination we serve</Text>
+        <Text color={"#656565"} py="30px">Here are some of the key destination we serve:</Text>
       </Box>
       <Flex flexDir={"column"} margin={"0px auto"} maxW={"900px"}>
         <Text color={"#FF0000"} fontWeight={"bold"}>Europe</Text>
@@ -126,7 +126,7 @@ const Countries = () => {
                 <Image src={Egypt} h={"15px"} />
                 <Text fontSize={"14px"}>Egypt</Text>
             </HStack>
-            <HStack spacing={2}  borderRadius={"50px"} border={"1px solid #296F63"} px="10px" py={"5px"} w={"130px"} justify={"center"}>
+            <HStack spacing={2}  borderRadius={"50px"} border={"1px solid #296F63"} px="10px" py={"5px"} w={"140px"} justify={"center"}>
                 <Image src={sa} h={"15px"}/>
                 <Text fontSize={"14px"}>South Africa</Text>
             </HStack>
@@ -241,7 +241,7 @@ const Countries = () => {
       <Flex flexDir={"column"} margin={"0px auto"} maxW={"900px"} mt="30px">
         <Text color={"#F00098"} fontWeight={"bold"}>Other Countries</Text>
         <Flex mt="10px" gap={"50px"}>
-            <HStack spacing={2} bg={"#FEE6F5"}  borderRadius={"50px"} border={"1px solid #F00098"} px="10px" py={"5px"} w={"120px"} justify={"center"}>
+            <HStack spacing={2} bg={"#FEE6F5"}  borderRadius={"50px"} border={"1px solid #F00098"} px="10px" py={"5px"} w={"130px"} justify={"center"}>
                 <Image src={honkkong} h={"15px"}/>
                 <Text fontSize={"14px"}>Hong Kong</Text>
             </HStack>

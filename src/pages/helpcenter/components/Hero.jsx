@@ -16,7 +16,7 @@ const Hero = () => {
       justifyContent="center"
     >
         <Flex justify={"center"} align={"center"}>
-          <Text fontSize={"70px"} fontWeight={"bold"} color={"#fff"}>Frequently Asked Questions</Text>
+          <Text fontSize={"70px"} fontWeight={"bold"} color={"#fff"}>Help Center</Text>
         </Flex>
     </Box>
   );
