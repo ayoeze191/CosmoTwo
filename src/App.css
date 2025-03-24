@@ -3,3 +3,25 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust to your preference */
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.mySwiper .swiper-button-prev {
+  left: 10px;  /* Left for the previous button */
+}
+
+.mySwiper .swiper-button-next {
+  left: 50px;  /* Adjusted left for the next button */
+}
+
+.mySwiper .swiper-button-next::after, .mySwiper .swiper-button-prev::after {
+  font-size: 18px;  /* Adjust icon size */
+}

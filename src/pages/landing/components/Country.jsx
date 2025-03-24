@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Box,
   Button,
@@ -11,43 +11,91 @@ import {
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { GoArrowRight } from "react-icons/go";
 import { GoArrowLeft } from "react-icons/go";
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/swiper-bundle.min.css';
+// import 'swiper/swiper-bundle.min.css';  // Correct CSS import
+// import 'swiper/swiper.min.css';
+// import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+import { Pagination, Navigation } from 'swiper/modules';
 
 const Country = () => {
-  const carouselData = [
+  // const testimonials = [
+  //   {
+  //     title: "Fast and Reliable Transfers",
+  //     text: "I've been using the service for over a year now, and I'm impressed by how fast my transfers are processed. My family receives money in minutes, and the rates are always competitive. Highly recommend!",
+  //     name: "Emeka O., Nigeria",
+  //     bgColor: "blue.700",
+  //     btnBg: "red.500"
+  //   },
+  //   {
+  //     title: "Easy to Use & Secure",
+  //     text: "The app is very simple to use. The transactions are fast, and I feel safe sending money across the world. Great service!",
+  //     name: "Carlos M., Spain",
+  //     bgColor: "red.700",
+  //     btnBg: "blue.500"
+  //   },
+  //   // Add more testimonials as needed
+  // ];
+
+  useEffect(() => {
+    if (cardContainerRef.current) {
+      cardWidthRef.current = cardContainerRef.current.offsetWidth;
+    }
+  }, []);
+
+const carouselData = [
     {
       head: "Fast and Reliable Transfers",
-      name: "Emeka",
+      name: "Emeka O., Nigeria",
+       bgColor: "#000080",
+       nameColor:"#ff0000",
       testimony:
         "I’ve been using Cosmosremit for over a year now, and I’m impressed by how fast my transfers are processed. My family receives money in minutes, and the  rates are always competitive. Highly recommend!",
     },
 
     {
       head: "Easy to use and secure",
-      name: "Jane",
+      name: "Carlos M., Spain",
+      nameColor: "#000080",
+    bgColor: "#ff0000",
       testimony:
-        "I’ve been using Cosmosremit for over a year now, and I’m impressed by how fast my transfers are processed. My family receives money in minutes, and the  rates are always competitive. Highly recommend!",
+        "I love how simple and user-friendly the Cosmosremit app is! Sending money abroad has never been easier, and I feel confident knowing my transactions are secure.Great service!",
     },
     {
-      head: "Easy to use and secure",
-      name: "Aminat",
+      head: "Great Customer Service",
+      name: "Fatimah S., U.A.E",
+      bgColor: "#000080",
+      nameColor:"#ff0000",
       testimony:
-        "I’ve been using Cosmosremit for over a year now, and I’m impressed by how fast my transfers are processed. My family receives money in minutes, and the  rates are always competitive. Highly recommend!",
+        "I had issues with one of ,my transfers, but the customer support team was very responsive and resolved it quickly. It's good to know there is always someone to help when needed",
+    },
+    {
+      head: "Seamless Transaction",
+      name: "Aisha T., USA",
+       bgColor: "#ff0000",
+       nameColor:"#000080",
+      testimony:
+        "I’ve tried several remittance services, but Cosmosremit stands out for its speed and reliabilty. My recipient always get their funds on time, and the process is hassle free",
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to move to the next image
+  const cardContainerRef = useRef(null);
+  const cardWidthRef = useRef(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselData.length);
   };
-
-  // Function to move to the previous image
   const prevImage = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + carouselData.length) % carouselData.length
     );
   };
+
 
   return (
     <Box
@@ -106,46 +154,57 @@ const Country = () => {
           </HStack>
         </Box>
 
-        <Box
-          width={["300px", "350px", "400px", "500px"]}
-          height={["300px", "350px", "400px"]}
-          px={["5px", "10px"]}
-          overflow="hidden"
-          borderRadius="30px"
-          boxShadow="lg"
-          color={"#fff"}
-          bg={"#FF0000"}
-        >
-          <Flex
-            // width="100%"
-            height="100%"
-            transition="transform 0.5s ease-in-out"
-            transform={`translateX(-${currentIndex * 100}%)`}
+       
+
+<Box
+      width="50%"
+      overflowX="auto"
+      css={{
+        scrollbarWidth: "none",  
+        "&::-webkit-scrollbar": {
+          display: "none", 
+        },
+      }}
+     
+    >
+      <Flex
+      ref={cardContainerRef}
+
+        width="500px" 
+        transition="transform 0.5s ease-in-out"
+        transform={`translateX(-${currentIndex * 85}%)`}
+        // transform={`translateX(-${currentIndex * cardWidthRef.current}px)`}
+        gap="30px"
+      >
+        {carouselData.map((item, index) => (
+          <Box
+            key={index}
+            width={["300px", "350px", "400px", "400px"]} 
+            height={["300px", "350px", "400px"]}
+            p="20px"
+            overflow="hidden"
+            borderRadius="30px"
+            boxShadow="lg"
+            color={"#fff"}
+            bg={item.bgColor || "#FF0000"}
+            flexShrink={0} 
           >
-            {carouselData.map((item, index) => (
-              <Box
-                key={index}
-                width="100%"
-                height="100%"
-                flex="none"
-                p={4}
-                boxSizing="border-box"
-              >
-                <Text fontSize="25px" fontWeight="bold" py="20px">
-                  {item.head}
-                </Text>
+            <Text fontSize="25px" fontWeight="bold" py="20px">
+              {item.head}
+            </Text>
 
-                <Text fontSize="md" maxW={"400px"}>
-                  {item.testimony}
-                </Text>
+            <Text fontSize="md" maxW={"400px"}>
+              {item.testimony}
+            </Text>
 
-                <Text fontSize="25px" fontWeight="bold" py={"20px"}>
-                  {item.name}
-                </Text>
-              </Box>
-            ))}
-          </Flex>
-        </Box>
+            <Text fontSize="25px" fontWeight="bold" py={"0px"} bg={item.nameColor} px="20px" borderRadius={"50px"} mt="50px" w={"fit-content"} >
+              {item.name}
+            </Text>
+          </Box>
+        ))}
+      </Flex>
+    </Box>
+        
       </Flex>
     </Box>
   );
