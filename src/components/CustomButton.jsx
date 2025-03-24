@@ -1,6 +1,7 @@
 // import { Button } from "@chakra-ui/button"
 import { Button } from "@chakra-ui/react";
 import { useNavigate }from "react-router-dom"
+
 // import React from "react"
 
 export const CustomButton = ({leftIcon,py,px,bg,color,hover,onClick,borderRadius,border,mr,w,btnText,fontSize,my,rightIcon}) => {

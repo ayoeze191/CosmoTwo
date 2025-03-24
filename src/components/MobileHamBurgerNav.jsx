@@ -3,18 +3,25 @@ import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 
-function MobileHamBugerNav({ ...props }) {
+function MobileHamBugerNav({ color, ...props }) {
 
   const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   return (
     <Box {...props}>
       <GiHamburgerMenu
         cursor={"pointer"}
         onClick={() => setShow((prev) => !prev)}
-        fontSize={"2em"}
+        fontSize={"1.5em"}
         color="black"
       />
       {show && (
@@ -53,9 +60,21 @@ function MobileHamBugerNav({ ...props }) {
               fontSize={"1.5em"}
               color={"black"}
             >
-              <Link to={"/pricing"} onClick={() => setShow(false)}>
-                <Text>Pricing</Text>
-              </Link>
+              <Link to={"/"}>
+                          <Text color={color} fontSize={"18px"} fontWeight={"bold"}>Home</Text>
+                        </Link>
+                        <Link to={"/about-us"}>
+                          <Text color={color} fontSize={"18px"} fontWeight={"bold"}>About us</Text>
+                        </Link>
+                        <Link to={"/contact-us"}>
+                          <Text color={color} fontSize={"18px"} fontWeight={"bold"}>Contact us</Text>
+                        </Link>
+                        <Link to={"/faq"}>
+                          <Text color={color} fontSize={"18px"} fontWeight={"bold"}>FAQ</Text>
+                        </Link>
+                        <Link to={"/help-center"}>
+                          <Text color={color} fontSize={"18px"} fontWeight={"bold"}>Help center</Text>
+                        </Link>
             </Flex>
           </Flex>
         </Box>

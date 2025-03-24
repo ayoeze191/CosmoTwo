@@ -1,4 +1,4 @@
-import { Box, Button, Image, Input, Text, Textarea } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Input, Text, Textarea } from "@chakra-ui/react";
 import Navigation from "../../components/Nav";
 import AboutHerobg from "./../../assets/Contact/Contactherobg.png";
 import requestIcon from "./../../assets/Contact/requestIcon.svg";
@@ -6,54 +6,35 @@ import { BiLocationPlus } from "react-icons/bi";
 import { BsGlobe2, BsInstagram, BsTwitterX } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { RiLinkedinLine } from "react-icons/ri";
+import facebook from "../../assets/facebook.png"
+import tube from "../../assets/tube.png"
+import twitte from "../../assets/twitte.png"
+import linked from "../../assets/linked.png"
 
 const ContactUs = () => {
   return (
     <Box>
-      <Box p={["10px", "20px", "30px", "5vw"]}>
-        <Box border={"solid 0.3px #FF0000"} borderRadius={"100px"}>
-          <Navigation />
-        </Box>
+      <Box  p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}>
+        
+          <Navigation border={"1px solid #ff0000"}/>
+        
       </Box>
-
-      <Box
-        position={"relative"}
-        height={["200px", "300px", "400px", "25vw"]}
-        m={["2rem 0 0 0", "3rem 0 0 0", "4rem 0 0 0"]}
-      >
-        <Box
-          bgColor={"#01010180"}
-          zIndex={-10}
-          height={"100%"}
-          top={0}
-          left={0}
-          position={"absolute"}
-          w={"100%"}
-        >
-          <Image
-            src={AboutHerobg}
-            alt=""
-            h={"100%"}
-            w={"100%"}
-            objectFit="cover"
-          />
-        </Box>
-        <Box
-          padding={["30px 0", "50px 0", "100px 0"]}
-          zIndex={9999}
-          top={0}
-          left={0}
-          textAlign="center"
-        >
-          <Text
-            color={"#FEFEFE"}
-            fontWeight={400}
-            fontSize={["1.2em", "1.8em", "2.5em", "3.5em"]}
+       <Box
+            p={["20px 20px", "20px 20px", "20px 20px", "20px 150px"]}
+            bgImage={AboutHerobg}
+            bgPosition={"center"}
+            bgRepeat={"no-repeat"}
+            bgSize={"cover"}
+            h={"400px"}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
           >
-            Contact Us
-          </Text>
-        </Box>
-      </Box>
+              <Flex justify={"center"} align={"center"}>
+                <Text fontSize={["50px","50px","50px","70px"]} textAlign={"center"} fontWeight={"bold"} color={"#fff"}>Contact Us</Text>
+              </Flex>
+          </Box>
+     
       <Text
         fontSize={["1em", "1.1em"]}
         lineHeight={"150%"}
@@ -61,6 +42,7 @@ const ContactUs = () => {
         m={["50px auto", "100px auto"]}
         textAlign={"center"}
         px={["10px", "20px"]}
+        color={"#656565"}
       >
         We're here to help! Whether you have questions about your transactions,
         need assistance with our services, or just want to learn more about{" "}
@@ -138,7 +120,7 @@ const ContactUs = () => {
 
         <Box>
           <Box
-            background={"#FFE6E6"}
+            background={"#E6E6F2"}
             width={"fit-content"}
             display={"flex"}
             gap={"11px"}
@@ -148,7 +130,7 @@ const ContactUs = () => {
             margin={["0 auto", "0 auto", "0 0"]}
           >
             <Box>
-              <BiLocationPlus color={"#FF0000"} size={"24px"} />
+              <BiLocationPlus color={"#000080"} size={"24px"} />
             </Box>
             <Text fontSize={["1em", "1.56em"]} fontWeight={700}>
               New Zealand Contact Info
@@ -211,42 +193,29 @@ const ContactUs = () => {
           <Box>
             <Text
               color={"#000000"}
-              fontSize={["0.9em", "1.1em"]}
+              fontSize={"16px"}
               padding={"30px 0 20px 0 "}
               borderBottom={"0.3px solid #656565"}
-              fontWeight={"bold"}
+              
               textAlign={"center"}
             >
               Follow up our socials to stay up to date
               <br /> on the latest news about CosmoRemit.
             </Text>
           </Box>
-          <Box
-            display={"flex"}
-            gap={["20px", "40px"]}
-            marginTop={"30px"}
-            justifyContent={"center"}
-          >
-            <Box padding={"10px"} background={"#E8F1E6"} borderRadius={"5px"}>
-              <FaFacebook color="#197500" />
-            </Box>
-            <Box padding={"10px"} background={"#E8F1E6"} borderRadius={"5px"}>
-              <BsTwitterX color="#001EFF" />
-            </Box>
-            <Box padding={"10px"} background={"#E8F1E6"} borderRadius={"5px"}>
-              <RiLinkedinLine color="#001EFF" />
-            </Box>
-            <Box padding={"10px"} background={"#E8F1E6"} borderRadius={"5px"}>
-              <BsInstagram color="#FF0000" />
-            </Box>
-          </Box>
+           <Flex align={"center"} justify={"space-between"} mt="30px">
+                             <Image src={facebook} h={"40px"}/>
+                             <Image src={twitte}  h={"40px"}/>
+                             <Image src={linked}  h={"40px"}/>
+                             <Image src={tube}  h={"40px"}/>
+                         </Flex>
         </Box>
       </Box>
       <Box
         background={"#F6F6F6"}
         p={["20px", "50px", "50px"]}
         maxWidth={"700px"}
-        margin={["50px auto", "100px auto"]}
+        margin={["50px auto", "70px auto"]}
         borderRadius={"10px"}
         width={("80%", "80%", "100%")}
       >
@@ -274,42 +243,35 @@ const ContactUs = () => {
           respond within 24 hours, ready to help
         </Text>
         <Box
-          width={"100%"}
-          borderRadius={"10px"}
-          border={"solid #656565 0.5px"}
-          padding={"11.5px 0"}
+          
         >
           <Input
             placeholder="Full name"
             width={"100%"}
             borderRadius={"10px"}
-            border={0}
+           
           />
         </Box>
 
         <Box
-          margin={"40px 0"}
-          width={"100%"}
-          borderRadius={"10px"}
-          border={"solid #656565 0.5px"}
-          padding={"11.5px 0"}
+        
         >
           <Input
             placeholder="Email Address"
             width={"100%"}
             borderRadius={"10px"}
-            border={0}
+            my={"30px"}
           />
         </Box>
 
         <Box
-          margin={"40px 0"}
-          width={"100%"}
-          borderRadius={"10px"}
-          border={"solid #656565 0.5px"}
-          padding={"11.5px 0"}
+          // margin={"40px 0"}
+          // width={"100%"}
+          // borderRadius={"10px"}
+          // border={"solid #656565 0.5px"}
+          // padding={"11.5px 0"}
         >
-          <Textarea placeholder="Message" color={"#656565"} border={0} />
+          <Textarea placeholder="Message" color={"#656565"} mb={"50px"} h={"200px"}/>
         </Box>
         <Button
           background={"#FF0000"}
