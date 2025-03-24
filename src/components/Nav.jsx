@@ -27,16 +27,16 @@ const Navigation = ({
       border={border}
       gap={["20px", "20px", "20px", "unset"]}
       // p="20px 150px"
-      p={["20px 30px", "20px 30px", "20px 30px", "20px 20px"]}
+      p={["20px 30px", "20px 30px", "20px 30px", "34px 20px"]}
       h="60px"
     >
       <Link to={"/"}>
-        <Flex gap={"2"} alignItems={"center"}>
+        <Flex gap={"2"} alignItems={"center"} height={"fit-content"}>
           <Img
             loading="lazy"
             src={logo}
             alt="logo"
-            h={["20px", "20px", "20px", "30px"]}
+            h={["20px", "20px", "20px", "42px"]}
           />
         </Flex>
       </Link>
