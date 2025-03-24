@@ -14,6 +14,7 @@ const International = () => {
       <Text
         fontSize={["20px", "25px", "30px", "40px"]}
         fontWeight={"bold"}
+        maxW={"1322px"}
         textAlign={"center"}
       >
         You can now send money{" "}

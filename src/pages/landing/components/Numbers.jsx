@@ -7,11 +7,13 @@ import youtube from "../../../assets/youtube.png";
 const Numbers = () => {
   return (
     <Flex
-      p={["20px 20px", "20px 20px", "20px 20px", "20px 20px", "100px 150px"]}
+      p={["20px 20px", "20px 20px", "20px 20px", "20px 20px", "100px 50px"]}
       bg={"#fff"}
-      justifyContent={["center", "center", "center"]}
+      justifyContent={["center", "center", "space-between"]}
+      maxW={["auto", "auto", "auto", "1322px"]}
+      mx={"auto"}
       flexWrap={"wrap"}
-      gap={["20px", "30px", "40px", "100px"]}
+      gap={["20px", "30px", "40px", "0"]}
     >
       <Box
         textAlign={["center", "center", "left"]}
