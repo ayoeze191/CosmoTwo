@@ -4,13 +4,30 @@ import React from "react";
 const International = () => {
   return (
     <Flex
-      p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}
+      p={["20px", "20px", "50px", "100px 150px"]}
       bg={"#fff"}
       justify={"center"}
       align={"center"}
-      h={"300px"}
+      h={["auto", "auto", "300px"]}
+      flexDirection={"column"}
     >
-        <Text fontSize={"30px"} fontWeight={"bold"} textAlign={["center"]}>You can now send money <span style={{color:"red", fontWeight:"1000px", textTransform:"uppercase"}}>internationally</span> in these currencies</Text>
+      <Text
+        fontSize={["20px", "25px", "30px", "40px"]}
+        fontWeight={"bold"}
+        textAlign={"center"}
+      >
+        You can now send money{" "}
+        <span
+          style={{
+            color: "red",
+            fontWeight: "bold",
+            textTransform: "uppercase",
+          }}
+        >
+          internationally
+        </span>{" "}
+        in these currencies
+      </Text>
     </Flex>
   );
 };

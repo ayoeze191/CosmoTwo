@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import MobileHamBugerNav from "./MobileHamBurgerNav";
 import { CustomButton } from "./CustomButton";
 import { IoLockClosedOutline } from "react-icons/io5";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 import { GoArrowUpRight } from "react-icons/go";
 
-const  Navigation =({bg, color, iconColor,loginColor, loginTextColor, border})=> {
+const Navigation = ({
+  bg,
+  color,
+  iconColor,
+  loginColor,
+  loginTextColor,
+  border,
+}) => {
   return (
     <Flex
       alignItems={"center"}
@@ -16,47 +23,85 @@ const  Navigation =({bg, color, iconColor,loginColor, loginTextColor, border})=>
       borderRadius={"50px"}
       fontSize={[".9em", "1.1em"]}
       flexDir={"row"}
-      bg={bg ||"white" }
+      bg={bg || "white"}
       border={border}
       gap={["20px", "20px", "20px", "unset"]}
       // p="20px 150px"
-      p={["20px 30px", "20px 30px", "20px 30px", "20px 20px"]}
+      p={["20px 30px", "20px 30px", "20px 30px", "34px 20px"]}
       h="60px"
     >
       <Link to={"/"}>
-        <Flex gap={"2"} alignItems={"center"}>
-          <Img loading="lazy" src={logo} alt="logo" h={["20px","20px","20px","30px"]} />
+        <Flex gap={"2"} alignItems={"center"} height={"fit-content"}>
+          <Img
+            loading="lazy"
+            src={logo}
+            alt="logo"
+            h={["20px", "20px", "20px", "42px"]}
+          />
         </Flex>
       </Link>
 
-      <MobileHamBugerNav display={["block", "block", "block", "none"]} color={color} />
+      <MobileHamBugerNav
+        display={["block", "block", "block", "none"]}
+        color={color}
+      />
       <>
         <Flex
           display={["none", "none", "none", "flex"]}
           alignItems={"center"}
-          gap={["20px", "70px"]}
+          gap={["10px", "15px", "30px", "50px"]}
           color={color}
         >
-           <Link to={"/"}>
-            <Text color={color} fontSize={"13px"} fontWeight={"bold"}>Home</Text>
+          <Link to={"/"}>
+            <Text
+              color={color}
+              fontSize={["14px", "16px", "18px", "18px"]}
+              fontWeight={"bold"}
+            >
+              Home
+            </Text>
           </Link>
           <Link to={"/about-us"}>
-            <Text color={color} fontSize={"13px"} fontWeight={"bold"}>About us</Text>
+            <Text
+              color={color}
+              fontSize={["14px", "16px", "18px", "18px"]}
+              fontWeight={"bold"}
+            >
+              About us
+            </Text>
           </Link>
           <Link to={"/contact-us"}>
-            <Text color={color} fontSize={"13px"} fontWeight={"bold"}>Contact us</Text>
+            <Text
+              color={color}
+              fontSize={["14px", "16px", "18px", "18px"]}
+              fontWeight={"bold"}
+            >
+              Contact us
+            </Text>
           </Link>
           <Link to={"/faq"}>
-            <Text color={color} fontSize={"13px"} fontWeight={"bold"}>FAQ</Text>
+            <Text
+              color={color}
+              fontSize={["14px", "16px", "18px", "18px"]}
+              fontWeight={"bold"}
+            >
+              FAQ
+            </Text>
           </Link>
           <Link to={"/help-center"}>
-            <Text color={color} fontSize={"13px"} fontWeight={"bold"}>Help center</Text>
+            <Text
+              color={color}
+              fontSize={["14px", "16px", "18px", "18px"]}
+              fontWeight={"bold"}
+            >
+              Help center
+            </Text>
           </Link>
         </Flex>
         <Flex
           display={["none", "none", "none", "flex"]}
           alignItems={"center"}
-          gap="50px"
+          gap={["15px", "20px", "30px", "40px"]}
         >
           <CustomButton
             color={loginTextColor}
@@ -71,6 +116,6 @@ const  Navigation =({bg, color, iconColor,loginColor, loginTextColor, border})=>
       </>
     </Flex>
   );
-}
+};
 
 export default Navigation;
