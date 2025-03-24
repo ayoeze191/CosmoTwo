@@ -61,22 +61,23 @@ const Country = () => {
       <Flex
         align={"center"}
         justify={"center"}
-        gap={"50px"}
+        gap={["20px", "30px", "40px", "50px"]}
         flexDir={["column", "column", "column", "row"]}
+        textAlign={["center", "center", "center", "start"]}
       >
         <Box>
           <Text
             fontWeight={"bold"}
-            fontSize={"30px"}
-            maxW={"300px"}
-            textAlign={["center", "center", "center", "start"]}
+            fontSize={["30px", "40px", "45px", "50px"]}
+            maxW={["300px", "350px", "400px", "415px"]}
+            lineHeight={"150%"}
           >
             What our 10,000+ users have to say
           </Text>
           <HStack
-            spacing={5}
-            mt="50px"
-            justify={["center", "start", "start", "start"]}
+            spacing={[3, 4, 5]}
+            mt={["30px", "40px", "50px"]}
+            justify={["center", "center", "center", "start"]}
           >
             <Button
               transform="translateY(-50%)"
@@ -88,7 +89,7 @@ const Country = () => {
               _hover={{ bg: "rgba(0, 0, 0, 0.8)" }}
               zIndex="2"
             >
-              <ChevronLeftIcon boxSize={8} />
+              <ChevronLeftIcon boxSize={[6, 7, 8]} />
             </Button>
             <Button
               transform="translateY(-50%)"
@@ -100,15 +101,15 @@ const Country = () => {
               _hover={{ bg: "rgba(0, 0, 0, 0.8)" }}
               zIndex="2"
             >
-              <ChevronRightIcon boxSize={8} />
+              <ChevronRightIcon boxSize={[6, 7, 8]} />
             </Button>
           </HStack>
         </Box>
 
         <Box
-          width={["350px", "500px"]}
-          height="400px"
-          px={"10px"}
+          width={["300px", "350px", "400px", "500px"]}
+          height={["300px", "350px", "400px"]}
+          px={["5px", "10px"]}
           overflow="hidden"
           borderRadius="30px"
           boxShadow="lg"
