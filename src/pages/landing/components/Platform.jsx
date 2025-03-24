@@ -8,50 +8,41 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Platform = () => {
   return (
-    <Box
-      p={["20px 20px", "20px 20px", "20px 20px", "20px 20px", "100px 150px"]}
-      bg={"#fff"}
-    >
+    <Box p={["20px", "20px", "50px", "100px 150px"]} bg={"#fff"}>
       <Text
-        fontSize={["24px", "26px", "28px", "30px"]}
+        fontSize={["20px", "24px", "28px", "30px"]}
         fontWeight={"bold"}
         textAlign={"center"}
         display={"flex"}
-        flexDir={["row", "row", "row", "column"]}
+        flexDir={["column", "column", "row", "row"]}
         alignItems={"center"}
         justifyContent={"center"}
-        gap={"9px"}
+        gap={["5px", "7px", "9px", "9px"]}
       >
         The only platform you <span> need for your</span>
       </Text>
       <Flex
-        // background={"red.300"}
-        // margin={}
-        mt="50px"
-        justifyContent={["center"]}
-        flexDir={["column", "column", "column", "row"]}
-        align={["center"]}
-        gap={["20px", "30px", "30px", "100px"]}
+        mt={["50px", "70px", "80px", "100px"]}
+        justifyContent={"center"}
+        flexDir={["column", "column", "row", "row"]}
+        align={["center", "center", "flex-start", "flex-start"]}
+        gap={["20px", "30px", "50px", "100px"]}
       >
         <Box textAlign={["center", "center", "left", "left"]}>
-          <Text
-            fontSize={["24px", "26px", "28px", "30px"]}
-            fontWeight={"bold"}
-            textAlign={"center"}
-          >
+          <Text fontSize={["20px", "24px", "28px", "30px"]} fontWeight={"bold"}>
             Fast & Secure Transfers
           </Text>
           <Text
             color={"#656565"}
-            maxW={["100%", "100%", "100%", "350px"]}
-            textAlign={["center", "center", "center", "left"]}
+            maxW={["100%", "100%", "80%", "350px"]}
+            textAlign={["center", "center", "left", "left"]}
             py="20px"
-            fontSize={["16px", "16px", "18px", "18px"]}
+            fontSize={["14px", "16px", "18px", "18px"]}
           >
             Send money instantly with our cutting-edge technology and
             encryption, ensuring secure transactions every time.
           </Text>
-          <Box mx="auto" w={"fit-content"}>
+          <Box mx={["auto", "auto", "initial", "initial"]} w={"fit-content"}>
             <CustomButton
               mx={"auto"}
               btnText={"sign-in to get started"}
@@ -67,48 +58,44 @@ const Platform = () => {
         <Box>
           <Image
             src={p1}
-            h={["100%", "100%", "100%", "400px"]}
+            w={["100%", "100%", "80%", "593px"]}
             borderRadius={"10px"}
           />
         </Box>
       </Flex>
 
       <Flex
-        mt="50px"
+        mt={["50px", "70px", "80px", "100px"]}
         justifyContent={"center"}
-        flexDir={["column-reverse", "column", "column", "row"]}
-        align={["center"]}
-        gap={["20px", "30px", "30px", "100px"]}
+        flexDir={["column", "column", "row", "row"]}
+        align={["center", "center", "flex-start", "flex-start"]}
+        gap={["20px", "30px", "50px", "100px"]}
       >
-        <Box order={["2", "2", "2", "1"]}>
+        <Box order={["2", "2", "1", "1"]}>
           <Image
             src={p2}
-            h={["100%", "100%", "100%", "400px"]}
+            w={["100%", "100%", "80%", "593px"]}
             borderRadius={"10px"}
           />
         </Box>
         <Box
           textAlign={["center", "center", "left", "left"]}
-          order={["1", "1", "1", "2"]}
+          order={["1", "1", "2", "2"]}
         >
-          <Text
-            fontSize={["24px", "26px", "28px", "30px"]}
-            fontWeight={"bold"}
-            textAlign={"center"}
-          >
+          <Text fontSize={["20px", "24px", "28px", "30px"]} fontWeight={"bold"}>
             Competitive Exchange Rates
           </Text>
           <Text
             color={"#656565"}
-            maxW={["100%", "100%", "100%", "350px"]}
-            textAlign={["center", "center", "center", "left"]}
+            maxW={["100%", "100%", "80%", "350px"]}
+            textAlign={["center", "center", "left", "left"]}
             py="20px"
-            fontSize={["16px", "16px", "18px", "18px"]}
+            fontSize={["14px", "16px", "18px", "18px"]}
           >
             Get more value for your money with our market-leading exchange rates
             and low transfer fees.
           </Text>
-          <Box mx="auto" w={"fit-content"}>
+          <Box mx={["auto", "auto", "initial", "initial"]} w={"fit-content"}>
             <CustomButton
               mx={"auto"}
               btnText={"sign-in to get started"}
@@ -123,31 +110,31 @@ const Platform = () => {
       </Flex>
 
       <Flex
-        mt="50px"
+        mt={["50px", "70px", "80px", "100px"]}
         justifyContent={"center"}
-        flexDir={["column", "column", "column", "row"]}
-        align={["center"]}
-        gap={["20px", "30px", "30px", "100px"]}
+        flexDir={["column", "column", "row", "row"]}
+        align={["center", "center", "flex-start", "flex-start"]}
+        gap={["20px", "30px", "50px", "100px"]}
       >
         <Box textAlign={["center", "center", "left", "left"]}>
-          <Text
-            fontSize={["24px", "26px", "28px", "30px"]}
-            fontWeight={"bold"}
-            textAlign={"center"}
-          >
+          <Text fontSize={["20px", "24px", "28px", "30px"]} fontWeight={"bold"}>
             Multiple Payment Options
           </Text>
           <Text
             color={"#656565"}
-            maxW={["100%", "100%", "100%", "350px"]}
-            textAlign={["center", "center", "center", "left"]}
+            maxW={["100%", "100%", "80%", "350px"]}
+            textAlign={["center", "center", "left", "left"]}
             py="20px"
-            fontSize={["16px", "16px", "18px", "18px"]}
+            fontSize={["14px", "16px", "18px", "18px"]}
           >
             Get more value for your money with our market-leading exchange rates
             and low transfer fees.
           </Text>
-          <Box mx="auto" w={"fit-content"}>
+          <Box
+            // mx="auto"
+            mx={["auto", "auto", "initial", "initial"]}
+            // w={"fit-content"}
+          >
             <CustomButton
               mx={"auto"}
               btnText={"sign-in to get started"}
@@ -162,7 +149,7 @@ const Platform = () => {
         <Box>
           <Image
             src={p3}
-            h={["100%", "100%", "100%", "400px"]}
+            w={["100%", "100%", "80%", "593px"]}
             borderRadius={"10px"}
           />
         </Box>

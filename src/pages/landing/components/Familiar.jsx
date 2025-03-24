@@ -5,7 +5,10 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Familiar = () => {
   return (
-    <Box p={["20px 30px", "20px 30px", "20px 30px", "100px 150px"]} bg={"#fff"}>
+    <Box
+      p={["20px 30px", "20px 30px", "20px 30px", "256px 0px 460px 136px"]}
+      bg={"#fff"}
+    >
       <Text fontSize={"50px"} fontWeight={"bold"} maxW={"456px"}>
         Get Familiar with the name
       </Text>

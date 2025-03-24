@@ -3,67 +3,70 @@ import React from "react";
 import ourApp from "../../../assets/ourApp.png";
 import apple from "../../../assets/apple.png";
 import google from "../../../assets/google.png";
+import Frame from "./../../../assets/AboutUs/Frame.webp";
 
 const OurApp = () => {
   return (
     <Box
-      p={["50px 20px", "100px 20px", "100px 20px", "120px 150px"]}
-      bgImage={ourApp}
-      bgPosition={"center"}
-      bgRepeat={"no-repeat"}
-      bgSize={"cover"}
-      // h={["400px", "400px", "400px", "500px"]}
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
+      p={["20px", "30px", "50px", "120px 150px"]}
+      margin={["20px auto", "40px auto", "5vw auto"]}
+      position={"relative"}
     >
-      <Flex
-        flexDir={"column"}
-        justify="center"
-        bg={"#fff"}
-        h={"fit-content"}
+      <Box
+        position={"absolute"}
+        top={0}
+        left={0}
+        height={"100%"}
         width={"100%"}
-        justifyContent={"center"}
-        borderRadius={"50px"}
-        py={["100px", "150px", "150px", "200px"]}
-        // py="200px"
       >
+        <Image
+          src={Frame}
+          alt=""
+          height={"100%"}
+          width={"100%"}
+          objectFit="cover"
+        />
+      </Box>
+      <Box
+        background={"#FEFEFE"}
+        maxWidth={"1448px"}
+        textAlign={"center"}
+        width={"100%"}
+        maxW={"1148px"}
+        margin={"0 auto"}
+        position={"relative"}
+        borderRadius={"20px"}
+        padding={["20px", "30px", "50px", "100px"]}
+      >
+        <Text
+          fontWeight={"bold"}
+          fontSize={["1.5rem", "2rem", "3rem", "3.5rem"]}
+          color={"red.500"}
+        >
+          Get Our App - Send
+          <br />
+          Money on the Go!
+        </Text>
         <Box
-          maxW={"762px"}
           display={"flex"}
-          flexDir={"column"}
-          // background={"red.200"}
-          mx={"auto"}
+          flexDirection={["column", "column", "row"]}
+          justifyContent={"center"}
           alignItems={"center"}
+          gap={["10px", "20px", "30px"]}
+          mt={["20px", "30px", "50px"]}
         >
-          <Text
-            fontSize={["30px", "30px", "50px", "80px"]}
-            textAlign={"center"}
-            w={"fit-content"}
-            fontWeight={"bold"}
-            color={"#FF0000"}
-          >
-            Get Our App - Send
-          </Text>
-          <Text
-            fontSize={["30px", "30px", "50px", "80px"]}
-            textAlign={"center"}
-            fontWeight={"bold"}
-            color={"#FF0000"}
-          >
-            Money on the Go!
-          </Text>
+          <Box>
+            <Image src={apple} alt="Apple Store" h={["50px", "70px", "90px"]} />
+          </Box>
+          <Box>
+            <Image
+              src={google}
+              alt="Google Play"
+              h={["50px", "70px", "90px"]}
+            />
+          </Box>
         </Box>
-        <Flex
-          align={"center"}
-          justify={"center"}
-          gap={["20px", "20px", "20px", "50px"]}
-          mt={"30px"}
-        >
-          <Image src={apple} h={["40px", "40px", "40px", "50px"]} />
-          <Image src={google} h={["40px", "40px", "40px", "50px"]} />
-        </Flex>
-      </Flex>
+      </Box>
     </Box>
   );
 };
