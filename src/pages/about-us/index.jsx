@@ -123,7 +123,7 @@ const About = () => {
         display={"grid"}
         gridTemplateColumns={["1fr", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
         gap={["10px", "15px", "2vw"]}
-        p={["10px", "20px", "3vw"]}
+        // p={["10px", "20px", "3vw"]}
       >
         {benefits.map((ben) => (
           <Benefit key={ben.title} {...ben} />
