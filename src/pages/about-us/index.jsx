@@ -9,6 +9,7 @@ import Rates from "./../../assets/AboutUs/Rates.webp";
 import Frame from "./../../assets/AboutUs/Frame.webp";
 import apple from "./../../assets/AboutUs/apple.svg";
 import google from "./../../assets/AboutUs/google.svg";
+import OurApp from "../landing/components/OurApp";
 
 const benefits = [
   {
@@ -130,58 +131,7 @@ const About = () => {
         ))}
       </Box>
 
-      <Box
-        p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
-        margin={["50px auto", "80px auto", "5vw auto"]}
-        position={"relative"}
-        padding={["50px", "30px", "5vw"]}
-      >
-        <Box
-          position={"absolute"}
-          top={0}
-          left={0}
-          height={"100%"}
-          width={"100%"}
-        >
-          <Image src={Frame} alt="" height={"100%"} width={"100%"} />
-        </Box>
-        <Box
-          background={"#FEFEFE"}
-          maxWidth={"1448px"}
-          textAlign={"center"}
-          width={"fit-content"}
-          margin={"0 auto"}
-          position={"relative"}
-          borderRadius={"100px"}
-          padding={["50px", "50px", "50px"]}
-        >
-          <Text
-            fontWeight={"bold"}
-            fontSize={["2rem", "3rem", "4rem", "3rem"]}
-            color={"red.500"}
-          >
-            Get Our App - Send
-            <br />
-            Money on the Go!
-          </Text>
-          <Box
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            gap={["20px", "30px", "3vw"]}
-            mt={["50px", "70px", "5vw"]}
-          >
-            <Box>
-              {" "}
-              <Image src={apple} alt="" h={"50px"} />
-            </Box>
-            <Box>
-              {" "}
-              <Image src={google} alt="" h={"50px"} />
-            </Box>
-          </Box>
-        </Box>
-      </Box>
+      <OurApp />
     </Box>
   );
 };
