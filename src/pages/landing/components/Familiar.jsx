@@ -14,7 +14,7 @@ const Familiar = () => {
       p={["20px 30px", "20px 30px", "20px 30px", "256px 136px 460px 136px"]}
       bg={"#fff"}
     >
-      <Flex align={"center"} justify={"space-between"}>
+      <Flex align={"center"} justify={"space-between"} flexDir={["column","column","column","row"]} gap={["30px","30px","30px","0px"]}>
         <Box>
           <Text fontSize={"50px"} fontWeight={"bold"} maxW={"456px"}>
             Get Familiar with the name
@@ -31,7 +31,7 @@ const Familiar = () => {
         </Box>
 
         <Box position={"relative"}>
-          <Flex>
+          <Flex> 
             <motion.div
               animate={{ y: [30, -30, 30] }}
               transition={{
@@ -42,7 +42,7 @@ const Familiar = () => {
               }}
               style={{ display: "inline-block" }}
             >
-              <Image src={h1} h={"300px"} />
+              <Image src={h1}  h={["200px","200px","300px"]} />
             </motion.div>
             <motion.div
               animate={{ y: [-30, 30, -30] }}
@@ -54,7 +54,7 @@ const Familiar = () => {
               }}
               style={{ display: "inline-block" }}
             >
-              <Image src={h2} h={"300px"} />
+              <Image src={h2} h={["200px","200px","300px"]} />
             </motion.div>
           </Flex>
 
@@ -69,7 +69,7 @@ const Familiar = () => {
               }}
               style={{ display: "inline-block" }}
             >
-              <Image src={h3} h={"300px"} zIndex={1} />
+              <Image src={h3}  h={["200px","200px","300px"]} zIndex={1} />
             </motion.div>
 
             <motion.div
@@ -87,7 +87,7 @@ const Familiar = () => {
                 bottom: 50,
               }}
             >
-              <Image src={h4} h={"300px"} zIndex={2} />
+              <Image src={h4} h={"300px"} zIndex={2} display={["none","none","none","block"]}/>
             </motion.div>
           </Flex>
         </Box>

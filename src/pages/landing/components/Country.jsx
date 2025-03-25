@@ -157,7 +157,7 @@ const carouselData = [
        
 
 <Box
-      width="50%"
+      width={["100%","100%","100%","50%"]}
       overflowX="auto"
       css={{
         scrollbarWidth: "none",  
@@ -170,7 +170,7 @@ const carouselData = [
       <Flex
       ref={cardContainerRef}
 
-        width="500px" 
+        width={["350px","350px","350px","500px"]} 
         transition="transform 0.5s ease-in-out"
         transform={`translateX(-${currentIndex * 85}%)`}
         // transform={`translateX(-${currentIndex * cardWidthRef.current}px)`}
@@ -180,7 +180,7 @@ const carouselData = [
           <Box
             key={index}
             width={["300px", "350px", "400px", "400px"]} 
-            height={["300px", "350px", "400px"]}
+            height={["400px", "400px", "400px"]}
             p="20px"
             overflow="hidden"
             borderRadius="30px"
