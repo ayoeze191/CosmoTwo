@@ -9,14 +9,14 @@ import cadM from "../../../assets/cadM.png";
 import nzdM from "../../../assets/nzdM.png";
 
 const International = () => {
-  const words = ["INTERNATIONALLY", "INSTANTLY", "WITHOUT HASSEL"]; 
-  const [textIndex, setTextIndex] = useState(0); 
+  const words = ["INTERNATIONALLY", "INSTANTLY", "WITHOUT HASSEL"];
+  const [textIndex, setTextIndex] = useState(0);
   const imageRef = useRef(null); // Create a reference for the image
   const inView = useInView(imageRef, { triggerOnce: true, threshold: 0.5 }); // Image fades in when 50% is in view
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTextIndex((prevIndex) => (prevIndex + 1) % words.length); 
+      setTextIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, 2000);
 
     return () => clearInterval(interval);
@@ -28,34 +28,32 @@ const International = () => {
       bg={"#fff"}
       // justify={"center"}
       // align={"center"}
-      h={["auto", "auto" ]}
+      h={["auto", "auto"]}
       flexDirection={"column"}
     >
-
       <Flex justify={"space-between"} align={"center"} mb={"50px"}>
-      <motion.div
-          ref={imageRef}
-          initial={{ opacity: 0 }} // Initially hidden
-          animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
-          transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
-        >
-          <Image src={audM}  />
-        </motion.div>
-        
         <motion.div
           ref={imageRef}
           initial={{ opacity: 0 }} // Initially hidden
           animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
           transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
         >
-          <Image src={gbpM}  />
+          <Image src={audM} />
         </motion.div>
-        
+
+        <motion.div
+          ref={imageRef}
+          initial={{ opacity: 0 }} // Initially hidden
+          animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
+          transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
+        >
+          <Image src={gbpM} />
+        </motion.div>
       </Flex>
       <motion.div
         style={{
           display: "inline-block",
-          textAlign:"center",
+          textAlign: "center",
           fontSize: "24px",
           fontWeight: "bold",
         }}
@@ -66,11 +64,12 @@ const International = () => {
         // style={{ display: "inline-block", fontSize: "24px", fontWeight: "bold" }}
       >
         <motion.span
-          initial={{ x: -50}} // Starts off-screen to the left
+          initial={{ x: -50 }} // Starts off-screen to the left
           animate={{ x: 0 }} // Moves to its position
-          // exit={{ opacity: 0 }} 
+          // exit={{ opacity: 0 }}
           transition={{
             duration: 2, // Slower movement (2 seconds)
+            ease: "easeInOut", // Smooth easing for responsive movement
             repeat: Infinity,
             // ease: "easeInOut",
             repeatType: "mirror",
@@ -86,10 +85,10 @@ const International = () => {
             >
               You can now send money{" "}
             </Text>
-            <motion.span 
-              initial={{ x: 0, opacity:0 }} // Starts off-screen to the left
+            <motion.span
+              initial={{ x: 0, opacity: 0 }} // Starts off-screen to the left
               animate={{ x: 0, opacity: 1 }} // Moves to its position
-              exit={{ opacity: 0 }} 
+              exit={{ opacity: 0 }}
               transition={{
                 duration: 2, // Slower movement (2 seconds)
                 repeat: Infinity,
@@ -98,9 +97,14 @@ const International = () => {
               }}
               style={{ display: "inline-block" }}
             >
-            <Text fontSize={"45px"} color={"#ff0000"} textAlign={"center"} fontWeight={"extrabold"}>
-              {words[textIndex]}
-            </Text>
+              <Text
+                fontSize={"45px"}
+                color={"#ff0000"}
+                textAlign={"center"}
+                fontWeight={"extrabold"}
+              >
+                {words[textIndex]}
+              </Text>
             </motion.span>
           </Flex>
         </motion.span>
@@ -114,19 +118,23 @@ const International = () => {
           }}
           style={{ display: "inline-block" }}
         >
-          <Text fontSize={["20px", "25px", "30px", "40px"]} fontWeight={"bold"} textAlign={"center"}>
+          <Text
+            fontSize={["20px", "25px", "30px", "40px"]}
+            fontWeight={"bold"}
+            textAlign={"center"}
+          >
             in these currencies
           </Text>
         </motion.span>
       </motion.div>
       <Flex justify={"space-between"} align={"center"} mt={"50px"}>
-      <motion.div
+        <motion.div
           ref={imageRef}
           initial={{ opacity: 0 }} // Initially hidden
           animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
           transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
         >
-          <Image src={usdM}  />
+          <Image src={usdM} />
         </motion.div>
         <motion.div
           ref={imageRef}
@@ -134,7 +142,7 @@ const International = () => {
           animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
           transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
         >
-          <Image src={cadM}  />
+          <Image src={cadM} />
         </motion.div>
         <motion.div
           ref={imageRef}
@@ -142,9 +150,8 @@ const International = () => {
           animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
           transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
         >
-           <Image src={nzdM}  />
+          <Image src={nzdM} />
         </motion.div>
-       
       </Flex>
     </Flex>
   );
