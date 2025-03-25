@@ -79,7 +79,14 @@ const Hero = () => {
 
   return (
     <Box
-      p={["20px 20px", "20px 20px", "20px 20px", "20px 20px", "30px 150px"]}
+      p={[
+        "20px 20px",
+        "20px 20px",
+        "20px 20px",
+        "20px 20px",
+        "30px 100px",
+        "30px 150px",
+      ]}
       bgImage={Bg}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
@@ -88,7 +95,7 @@ const Hero = () => {
       <Navigation />
 
       <Flex
-        mt={["50px", "50px", "50px", "100px"]}
+        my={["50px", "50px", "50px", "100px"]}
         // mx={["auto", "auto", "auto"]}
         // background={"red.200"}
         alignItems={"center"}

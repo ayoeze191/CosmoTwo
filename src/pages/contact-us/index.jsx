@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Image, Input, Text, Textarea } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Input,
+  Text,
+  Textarea,
+} from "@chakra-ui/react";
 import Navigation from "../../components/Nav";
 import AboutHerobg from "./../../assets/Contact/Contactherobg.png";
 import requestIcon from "./../../assets/Contact/requestIcon.svg";
@@ -6,35 +14,49 @@ import { BiLocationPlus } from "react-icons/bi";
 import { BsGlobe2, BsInstagram, BsTwitterX } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { RiLinkedinLine } from "react-icons/ri";
-import facebook from "../../assets/facebook.png"
-import tube from "../../assets/tube.png"
-import twitte from "../../assets/twitte.png"
-import linked from "../../assets/linked.png"
+import facebook from "../../assets/facebook.png";
+import tube from "../../assets/tube.png";
+import twitte from "../../assets/twitte.png";
+import linked from "../../assets/linked.png";
 
 const ContactUs = () => {
   return (
     <Box>
-      <Box  p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}>
-        
-          <Navigation border={"1px solid #ff0000"}/>
-        
+      <Box
+        p={[
+          "20px 20px",
+          "20px 20px",
+          "20px 20px",
+          "20px 20px",
+          "30px 100px",
+          "30px 150px",
+        ]}
+      >
+        <Navigation border={"1px solid #ff0000"} />
       </Box>
-       <Box
-            p={["20px 20px", "20px 20px", "20px 20px", "20px 150px"]}
-            bgImage={AboutHerobg}
-            bgPosition={"center"}
-            bgRepeat={"no-repeat"}
-            bgSize={"cover"}
-            h={"400px"}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
+      <Box
+        p={["20px 20px", "20px 20px", "20px 20px", "20px 150px"]}
+        bgImage={AboutHerobg}
+        bgPosition={"center"}
+        bgRepeat={"no-repeat"}
+        bgSize={"cover"}
+        h={"400px"}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Flex justify={"center"} align={"center"}>
+          <Text
+            fontSize={["50px", "50px", "50px", "70px"]}
+            textAlign={"center"}
+            fontWeight={"bold"}
+            color={"#fff"}
           >
-              <Flex justify={"center"} align={"center"}>
-                <Text fontSize={["50px","50px","50px","70px"]} textAlign={"center"} fontWeight={"bold"} color={"#fff"}>Contact Us</Text>
-              </Flex>
-          </Box>
-     
+            Contact Us
+          </Text>
+        </Flex>
+      </Box>
+
       <Text
         fontSize={["1em", "1.1em"]}
         lineHeight={"150%"}
@@ -196,19 +218,18 @@ const ContactUs = () => {
               fontSize={"16px"}
               padding={"30px 0 20px 0 "}
               borderBottom={"0.3px solid #656565"}
-              
               textAlign={"center"}
             >
               Follow up our socials to stay up to date
               <br /> on the latest news about CosmoRemit.
             </Text>
           </Box>
-           <Flex align={"center"} justify={"space-between"} mt="30px">
-                             <Image src={facebook} h={"40px"}/>
-                             <Image src={twitte}  h={"40px"}/>
-                             <Image src={linked}  h={"40px"}/>
-                             <Image src={tube}  h={"40px"}/>
-                         </Flex>
+          <Flex align={"center"} justify={"space-between"} mt="30px">
+            <Image src={facebook} h={"40px"} />
+            <Image src={twitte} h={"40px"} />
+            <Image src={linked} h={"40px"} />
+            <Image src={tube} h={"40px"} />
+          </Flex>
         </Box>
       </Box>
       <Box
@@ -242,20 +263,11 @@ const ContactUs = () => {
           Need assistance? Submit a request and our customer service team will
           respond within 24 hours, ready to help
         </Text>
-        <Box
-          
-        >
-          <Input
-            placeholder="Full name"
-            width={"100%"}
-            borderRadius={"10px"}
-           
-          />
+        <Box>
+          <Input placeholder="Full name" width={"100%"} borderRadius={"10px"} />
         </Box>
 
-        <Box
-        
-        >
+        <Box>
           <Input
             placeholder="Email Address"
             width={"100%"}
@@ -265,13 +277,18 @@ const ContactUs = () => {
         </Box>
 
         <Box
-          // margin={"40px 0"}
-          // width={"100%"}
-          // borderRadius={"10px"}
-          // border={"solid #656565 0.5px"}
-          // padding={"11.5px 0"}
+        // margin={"40px 0"}
+        // width={"100%"}
+        // borderRadius={"10px"}
+        // border={"solid #656565 0.5px"}
+        // padding={"11.5px 0"}
         >
-          <Textarea placeholder="Message" color={"#656565"} mb={"50px"} h={"200px"}/>
+          <Textarea
+            placeholder="Message"
+            color={"#656565"}
+            mb={"50px"}
+            h={"200px"}
+          />
         </Box>
         <Button
           background={"#FF0000"}

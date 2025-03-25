@@ -11,7 +11,7 @@ import internet from "../assets/internet.png";
 const Footer = () => {
   return (
     <Box
-      p={["20px", "20px", "50px", "100px 200px"]}
+      p={["20px", "20px", "50px", "50px", "100px 50px", "100px 150px"]}
       bg={"#000"}
       color={"#FEFEFE"}
     >
@@ -68,7 +68,7 @@ const Footer = () => {
             <Image src={location} h={"30px"} />
             <Text
               color={"#000"}
-              fontSize={["18px", "22px", "25px"]}
+              fontSize={["18px", "18px", "22px", "20px", "20px", "25px"]}
               lineHeight={"150%"}
               fontWeight={"medium"}
             >
@@ -110,7 +110,7 @@ const Footer = () => {
         <Box width={["100%", "100%", "100%"]}>
           <Flex
             justify={"center"}
-            gap={["10px", "15px", "20px"]}
+            gap={["10px", "10px", "10px", "10px", "15px", "15px", "20px"]}
             align={"center"}
             bg={"#fff"}
             py={["5px", "10px", "15px"]}
@@ -123,7 +123,7 @@ const Footer = () => {
             <Image src={location} h={"30px"} />
             <Text
               color={"#000"}
-              fontSize={["18px", "22px", "25px"]}
+              fontSize={["18px", "18px", "22px", "20px", "20px", "25px"]}
               lineHeight={"150%"}
               fontWeight={"medium"}
             >
@@ -185,7 +185,7 @@ const Footer = () => {
             <Image src={internet} h={"30px"} />
             <Text
               color={"#000"}
-              fontSize={["18px", "22px", "25px"]}
+              fontSize={["18px", "18px", "22px", "20px", "20px", "25px"]}
               lineHeight={"150%"}
               fontWeight={"medium"}
             >
