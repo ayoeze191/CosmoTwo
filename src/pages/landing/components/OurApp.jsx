@@ -20,7 +20,8 @@ const OurApp = () => {
         width={"100%"}
       >
         <Image
-          src={Frame}
+          // src={Frame}
+          src="https://s3-alpha-sig.figma.com/img/93a5/7008/84dbc4aee11a91e79e702602ea09939d?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=X6s8jyXNcPSBesKzVyAmsX3flYEb0rzmk5uOkAmBt0LNigccV8KAGq6dw3uu-5aBwFe~vURGaTdNn-3BoejYa4dKvfH6lKSfXbjEILb1gVScANxJ8PKGwoHXBZQfayu8jhrCRmeKs~vWq36ug8yGFpFhHFOO1yFIvmqhrWA0tbIOt8ysHCL9rC5BxULT8p4LiVDSz0uiNdJ3zSYPpcSnSMzu5yuq~3P-act-pEtcrTJHaa-2w2~BAG20UY251-aGBYoXdeIO~Cn3WZGywVh9ksFx4PrMHZjCm-wKXhCIvC6ne4saT7Hu1r1Jj-2CwL4RruRWOYUGIsrCOjGVAtDBhg__"
           alt=""
           height={"100%"}
           width={"100%"}
