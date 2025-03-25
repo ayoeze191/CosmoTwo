@@ -31,7 +31,7 @@ const International = () => {
       h={["auto", "auto"]}
       flexDirection={"column"}
     >
-      <Flex justify={"space-between"} align={"center"} mb={"50px"}>
+      <Flex justify={"space-between"} align={"center"} mb={["20px","20px","20px","50px"]}>
         <motion.div
           ref={imageRef}
           initial={{ opacity: 0 }} // Initially hidden
@@ -50,11 +50,19 @@ const International = () => {
           <Image src={gbpM} />
         </motion.div>
       </Flex>
+
+
+
+
+
+
+
+
       <motion.div
         style={{
           display: "inline-block",
           textAlign: "center",
-          fontSize: "24px",
+          // fontSize: "24px",
           fontWeight: "bold",
         }}
 
@@ -76,10 +84,11 @@ const International = () => {
           }}
           style={{ display: "inline-block" }}
         >
-          <Flex gap={"10px"} align={"center"}>
+          <Flex gap={["5px","5px","5px","10px"]} align={"center"}>
             <Text
-              fontSize={["20px", "25px", "30px", "40px"]}
+              fontSize={["18px", "25px", "30px", "40px"]}
               fontWeight={"bold"}
+              // pl={"20px"}
               maxW={"1322px"}
               textAlign={"center"}
             >
@@ -98,7 +107,7 @@ const International = () => {
               style={{ display: "inline-block" }}
             >
               <Text
-                fontSize={"45px"}
+                fontSize={["18px", "25px", "30px", "45px"]}
                 color={"#ff0000"}
                 textAlign={"center"}
                 fontWeight={"extrabold"}
@@ -119,7 +128,7 @@ const International = () => {
           style={{ display: "inline-block" }}
         >
           <Text
-            fontSize={["20px", "25px", "30px", "40px"]}
+            fontSize={["18px", "25px", "30px", "40px"]}
             fontWeight={"bold"}
             textAlign={"center"}
           >
@@ -127,7 +136,7 @@ const International = () => {
           </Text>
         </motion.span>
       </motion.div>
-      <Flex justify={"space-between"} align={"center"} mt={"50px"}>
+    <Flex justify={"space-between"} align={"center"} mt={["20px","20px","20px","50px"]}>
         <motion.div
           ref={imageRef}
           initial={{ opacity: 0 }} // Initially hidden
