@@ -45,24 +45,40 @@ const benefits = [
 const About = () => {
   return (
     <Box>
-      <Box  p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}>
-          <Navigation border={"1px solid #ff0000"} />
+      <Box
+        p={[
+          "20px 20px",
+          "20px 20px",
+          "20px 20px",
+          "20px 20px",
+          "30px 100px",
+          "30px 150px",
+        ]}
+      >
+        <Navigation border={"1px solid #ff0000"} />
       </Box>
-       <Box
-            p={["20px 30px", "20px 30px", "20px 30px", "20px 150px"]}
-            bgImage={AboutHerobg}
-            bgPosition={"center"}
-            bgRepeat={"no-repeat"}
-            bgSize={"cover"}
-            h={"400px"}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
+      <Box
+        p={["20px 30px", "20px 30px", "20px 30px", "20px 150px"]}
+        bgImage={AboutHerobg}
+        bgPosition={"center"}
+        bgRepeat={"no-repeat"}
+        bgSize={"cover"}
+        h={"400px"}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Flex justify={"center"} align={"center"}>
+          <Text
+            fontSize={["50px", "50px", "50px", "70px"]}
+            textAlign={"center"}
+            fontWeight={"bold"}
+            color={"#fff"}
           >
-              <Flex justify={"center"} align={"center"}>
-                <Text fontSize={["50px","50px","50px","70px"]} textAlign={"center"} fontWeight={"bold"} color={"#fff"}>About Us</Text>
-              </Flex>
-        </Box>
+            About Us
+          </Text>
+        </Flex>
+      </Box>
       <Box
         p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}
         display={"flex"}
@@ -90,25 +106,24 @@ const About = () => {
             color={"#656565"}
             fontSize={["0.8rem", "0.9rem", "1rem", "1rem"]}
           >
-            At <span style={{color:"#ff0000"}}>CosmoRemit,</span> we make international money transfers fast, secure,
-            and affordable. Based in Australia, we are committed to providing a
-            seamless and hassle-free remittance experience for individuals and
-            businesses. Whether you're sending money to support family, pay for
-            services, or manage global transactions, our platform ensures your
-            funds reach their destination quickly and safely.
+            At <span style={{ color: "#ff0000" }}>CosmoRemit,</span> we make
+            international money transfers fast, secure, and affordable. Based in
+            Australia, we are committed to providing a seamless and hassle-free
+            remittance experience for individuals and businesses. Whether you're
+            sending money to support family, pay for services, or manage global
+            transactions, our platform ensures your funds reach their
+            destination quickly and safely.
           </Text>
         </Box>
       </Box>
       <Box
-      p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
+        p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
         maxWidth={"1529.544677734375px"}
         margin={"0 auto"}
         display={"grid"}
-        
         gridTemplateColumns={["1fr", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
         gap={["10px", "15px", "2vw"]}
         p={["10px", "20px", "3vw"]}
-        
       >
         {benefits.map((ben) => (
           <Benefit key={ben.title} {...ben} />
@@ -116,7 +131,7 @@ const About = () => {
       </Box>
 
       <Box
-      p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
+        p={["20px 30px", "20px 30px", "20px 30px", "50px 150px"]}
         margin={["50px auto", "80px auto", "5vw auto"]}
         position={"relative"}
         padding={["50px", "30px", "5vw"]}
@@ -158,11 +173,11 @@ const About = () => {
           >
             <Box>
               {" "}
-              <Image src={apple} alt="" h={"50px"}/>
+              <Image src={apple} alt="" h={"50px"} />
             </Box>
             <Box>
               {" "}
-              <Image src={google} alt="" h={"50px"}/>
+              <Image src={google} alt="" h={"50px"} />
             </Box>
           </Box>
         </Box>
