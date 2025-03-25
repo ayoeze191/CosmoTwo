@@ -36,8 +36,20 @@ import Kenya from "../../../assets/Kenya.png";
 import Egypt from "../../../assets/Egypt.png";
 import sa from "../../../assets/sa.png";
 import dc from "../../../assets/dc.png";
+import { motion } from "framer-motion";
+import { useState, useEffect } from 'react';
 
 const Countries = () => {
+  const [text, setText] = useState("internationally");
+  useEffect(() => {
+    // Simulate a delay and then change "internationally" to "instantly"
+    const timeout = setTimeout(() => {
+      setText("instantly");
+    }, 2000); // Change the word after 2 seconds (you can adjust this delay)
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <Box
       p={["20px 20px", "20px 20px", "20px 20px", "50px 150px"]}
