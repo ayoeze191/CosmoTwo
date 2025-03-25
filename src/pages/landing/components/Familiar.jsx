@@ -33,7 +33,7 @@ const Familiar = () => {
         <Box position={"relative"}>
           <Flex>
             <motion.div
-      animate={{ y: [0, -30, 30] }} // Moves the image up (-20px) and back down (0px)
+      animate={{ y: [30, -30, 30] }}
       transition={{
         duration: 3,
         repeat: Infinity, 
@@ -45,7 +45,7 @@ const Familiar = () => {
       <Image src = {h1} h={"300px"}/>
     </motion.div>
     <motion.div
-      animate={{ y: [0,30, -30] }} // Moves the image up (-20px) and back down (0px)
+      animate={{ y: [-30,30, -30] }} 
       transition={{
         duration: 3,
         repeat: Infinity, 
@@ -61,7 +61,7 @@ const Familiar = () => {
 
          <Flex position={"relative"}>
          <motion.div
-      animate={{ y: [0, 30, -30] }} // Moves the image up (-20px) and back down (0px)
+      animate={{ y: [-30, 30, -30] }}
       transition={{
         duration: 3, 
         repeat: Infinity, 
@@ -74,7 +74,7 @@ const Familiar = () => {
     </motion.div>
          
     <motion.div
-      animate={{ y: [0, -30, 30] }} // Moves the image up (-20px) and back down (0px)
+      animate={{ y: [30, -30, 30] }} 
       transition={{
         duration: 3, 
         repeat: Infinity, 
