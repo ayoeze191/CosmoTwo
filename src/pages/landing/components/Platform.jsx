@@ -25,7 +25,7 @@ const Platform = () => {
         mt={["50px", "70px", "80px", "100px"]}
         justifyContent={"center"}
         flexDir={["column", "column", "row", "row"]}
-        align={["center", "center", "flex-start", "flex-start"]}
+        align={["center", "center", "start", "center"]}
         gap={["20px", "30px", "50px", "100px"]}
       >
         <Box textAlign={["center", "center", "left", "left"]}>
@@ -67,8 +67,9 @@ const Platform = () => {
       <Flex
         mt={["50px", "70px", "80px", "100px"]}
         justifyContent={"center"}
+        align={["center", "center", "start", "center"]}
         flexDir={["column", "column", "row", "row"]}
-        align={["center", "center", "flex-start", "flex-start"]}
+        // align={["center", "center", "flex-start", "flex-start"]}
         gap={["20px", "30px", "50px", "100px"]}
       >
         <Box order={["2", "2", "1", "1"]}>
@@ -113,7 +114,8 @@ const Platform = () => {
         mt={["50px", "70px", "80px", "100px"]}
         justifyContent={"center"}
         flexDir={["column", "column", "row", "row"]}
-        align={["center", "center", "flex-start", "flex-start"]}
+        align={["center", "center", "start", "center"]}
+        // align={["center", "center", "flex-start", "flex-start"]}
         gap={["20px", "30px", "50px", "100px"]}
       >
         <Box textAlign={["center", "center", "left", "left"]}>

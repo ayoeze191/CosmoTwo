@@ -5,6 +5,7 @@ import { CustomButton } from "./CustomButton";
 import { IoLockClosedOutline } from "react-icons/io5";
 import logo from "../assets/logo.png";
 import { GoArrowUpRight } from "react-icons/go";
+import { useLocation } from "react-router-dom";
 
 const Navigation = ({
   bg,
@@ -14,6 +15,10 @@ const Navigation = ({
   loginTextColor,
   border,
 }) => {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <Flex
       alignItems={"center"}
@@ -24,9 +29,9 @@ const Navigation = ({
       fontSize={[".9em", "1.1em"]}
       flexDir={"row"}
       bg={bg || "white"}
+      width={"100%"}
       border={border}
       gap={["20px", "20px", "20px", "unset"]}
-      // p="20px 150px"
       p={["20px 30px", "20px 30px", "20px 30px", "34px 20px"]}
       h="60px"
     >
@@ -49,12 +54,12 @@ const Navigation = ({
         <Flex
           display={["none", "none", "none", "flex"]}
           alignItems={"center"}
-          gap={["10px", "15px", "30px", "50px"]}
+          gap={["10px", "15px", "15px", "30px", "50px"]}
           color={color}
         >
           <Link to={"/"}>
             <Text
-              color={color}
+              color={isActive("/") ? "red" : color}
               fontSize={["14px", "16px", "18px", "18px"]}
               fontWeight={"bold"}
             >
@@ -63,7 +68,7 @@ const Navigation = ({
           </Link>
           <Link to={"/about-us"}>
             <Text
-              color={color}
+              color={isActive("/about-us") ? "red" : color}
               fontSize={["14px", "16px", "18px", "18px"]}
               fontWeight={"bold"}
             >
@@ -72,7 +77,7 @@ const Navigation = ({
           </Link>
           <Link to={"/contact-us"}>
             <Text
-              color={color}
+              color={isActive("/contact-us") ? "red" : color}
               fontSize={["14px", "16px", "18px", "18px"]}
               fontWeight={"bold"}
             >
@@ -81,7 +86,7 @@ const Navigation = ({
           </Link>
           <Link to={"/faq"}>
             <Text
-              color={color}
+              color={isActive("/faq") ? "red" : color}
               fontSize={["14px", "16px", "18px", "18px"]}
               fontWeight={"bold"}
             >
@@ -90,7 +95,7 @@ const Navigation = ({
           </Link>
           <Link to={"/help-center"}>
             <Text
-              color={color}
+              color={isActive("/help-center") ? "red" : color}
               fontSize={["14px", "16px", "18px", "18px"]}
               fontWeight={"bold"}
             >
@@ -108,9 +113,7 @@ const Navigation = ({
             rightIcon={<GoArrowUpRight />}
             borderRadius="50px"
             btnText={"Sign-in"}
-            // px="35px"
             bg={"red"}
-            // leftIcon={<IoLockClosedOutline color={loginColor} />}
           />
         </Flex>
       </>
