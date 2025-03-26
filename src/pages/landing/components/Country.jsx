@@ -11,15 +11,15 @@ import {
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { GoArrowRight } from "react-icons/go";
 import { GoArrowLeft } from "react-icons/go";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 // import 'swiper/swiper-bundle.min.css';
 // import 'swiper/swiper-bundle.min.css';  // Correct CSS import
 // import 'swiper/swiper.min.css';
 // import Swiper from 'swiper/bundle';
 
 // import styles bundle
-import 'swiper/css/bundle';
-import { Pagination, Navigation } from 'swiper/modules';
+import "swiper/css/bundle";
+import { Pagination, Navigation } from "swiper/modules";
 
 const Country = () => {
   // const testimonials = [
@@ -46,12 +46,12 @@ const Country = () => {
     }
   }, []);
 
-const carouselData = [
+  const carouselData = [
     {
       head: "Fast and Reliable Transfers",
       name: "Emeka O., Nigeria",
-       bgColor: "#000080",
-       nameColor:"#ff0000",
+      bgColor: "#000080",
+      nameColor: "#ff0000",
       testimony:
         "I’ve been using Cosmosremit for over a year now, and I’m impressed by how fast my transfers are processed. My family receives money in minutes, and the  rates are always competitive. Highly recommend!",
     },
@@ -60,7 +60,7 @@ const carouselData = [
       head: "Easy to use and secure",
       name: "Carlos M., Spain",
       nameColor: "#000080",
-    bgColor: "#ff0000",
+      bgColor: "#ff0000",
       testimony:
         "I love how simple and user-friendly the Cosmosremit app is! Sending money abroad has never been easier, and I feel confident knowing my transactions are secure.Great service!",
     },
@@ -68,25 +68,24 @@ const carouselData = [
       head: "Great Customer Service",
       name: "Fatimah S., U.A.E",
       bgColor: "#000080",
-      nameColor:"#ff0000",
+      nameColor: "#ff0000",
       testimony:
         "I had issues with one of ,my transfers, but the customer support team was very responsive and resolved it quickly. It's good to know there is always someone to help when needed",
     },
     {
       head: "Seamless Transaction",
       name: "Aisha T., USA",
-       bgColor: "#ff0000",
-       nameColor:"#000080",
+      bgColor: "#ff0000",
+      nameColor: "#000080",
       testimony:
         "I’ve tried several remittance services, but Cosmosremit stands out for its speed and reliabilty. My recipient always get their funds on time, and the process is hassle free",
     },
   ];
 
-
   const cardContainerRef = useRef(null);
   const cardWidthRef = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselData.length);
   };
@@ -95,7 +94,6 @@ const carouselData = [
       (prevIndex) => (prevIndex - 1 + carouselData.length) % carouselData.length
     );
   };
-
 
   return (
     <Box
@@ -116,7 +114,7 @@ const carouselData = [
         <Box>
           <Text
             fontWeight={"bold"}
-            fontSize={["30px", "40px", "45px", "50px"]}
+            fontSize={["30px", "40px", "50px", "50px"]}
             maxW={["300px", "350px", "400px", "415px"]}
             lineHeight={"150%"}
           >
@@ -154,57 +152,65 @@ const carouselData = [
           </HStack>
         </Box>
 
-       
-
-<Box
-      width={["100%","100%","100%","50%"]}
-      overflowX="auto"
-      css={{
-        scrollbarWidth: "none",  
-        "&::-webkit-scrollbar": {
-          display: "none", 
-        },
-      }}
-     
-    >
-      <Flex
-      ref={cardContainerRef}
-
-        width={["350px","350px","350px","500px"]} 
-        transition="transform 0.5s ease-in-out"
-        transform={`translateX(-${currentIndex * 85}%)`}
-        // transform={`translateX(-${currentIndex * cardWidthRef.current}px)`}
-        gap="30px"
-      >
-        {carouselData.map((item, index) => (
-          <Box
-            key={index}
-            width={["300px", "350px", "400px", "400px"]} 
-            height={["400px", "400px", "400px"]}
-            p="20px"
-            overflow="hidden"
-            borderRadius="30px"
-            boxShadow="lg"
-            color={"#fff"}
-            bg={item.bgColor || "#FF0000"}
-            flexShrink={0} 
+        <Box
+          width={["100%", "100%", "100%", "50%"]}
+          overflowX="auto"
+          css={{
+            scrollbarWidth: "none",
+            "&::-webkit-scrollbar": {
+              display: "none",
+            },
+          }}
+        >
+          <Flex
+            ref={cardContainerRef}
+            width={["350px", "350px", "350px", "500px"]}
+            transition="transform 0.5s ease-in-out"
+            transform={`translateX(-${currentIndex * 85}%)`}
+            // transform={`translateX(-${currentIndex * cardWidthRef.current}px)`}
+            gap="30px"
           >
-            <Text fontSize="25px" fontWeight="bold" py="20px">
-              {item.head}
-            </Text>
+            {carouselData.map((item, index) => (
+              <Box
+                key={index}
+                // width={["300px", "350px", "400px", "400px"]}
+                height={["400px", "400px", "638px"]}
+                display={"flex"}
+                gap={"50px"}
+                flexDirection={"column"}
+                justifyContent={"center"}
+                p="100px 50px"
+                overflow="hidden"
+                borderRadius="30px"
+                boxShadow="lg"
+                color={"#fff"}
+                bg={item.bgColor || "#FF0000"}
+                flexShrink={0}
+              >
+                <Text fontSize={"30px"} fontWeight="bold" lineHeight={"150%"}>
+                  {item.head}
+                </Text>
 
-            <Text fontSize="md" maxW={"400px"}>
-              {item.testimony}
-            </Text>
+                <Text fontSize={"25px"} maxW={"400px"} fontWeight="bold">
+                  {item.testimony}
+                </Text>
 
-            <Text fontSize="25px" fontWeight="bold" py={"0px"} bg={item.nameColor} px="20px" borderRadius={"50px"} mt="50px" w={"fit-content"} >
-              {item.name}
-            </Text>
-          </Box>
-        ))}
-      </Flex>
-    </Box>
-        
+                <Text
+                  fontSize="30px"
+                  lineHeight={"150%"}
+                  fontWeight="bold"
+                  py={"0px"}
+                  bg={item.nameColor}
+                  px="20px"
+                  borderRadius={"50px"}
+                  w={"fit-content"}
+                >
+                  {item.name}
+                </Text>
+              </Box>
+            ))}
+          </Flex>
+        </Box>
       </Flex>
     </Box>
   );
