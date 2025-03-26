@@ -131,23 +131,78 @@ const Country = () => {
               borderRadius={"50px"}
               variant="unstyled"
               color="white"
-              bg="rgba(0, 0, 0, 0.5)"
-              _hover={{ bg: "rgba(0, 0, 0, 0.8)" }}
+              border={"#656565 solid 1px "}
+              // bg="rgba(0, 0, 0, 0.5)"
+              _hover={{ bg: "#E6E6E6" }}
               zIndex="2"
             >
-              <ChevronLeftIcon boxSize={[6, 7, 8]} />
+              <svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M7.26763 17.6732L8.47575 18.6248C10.433 20.1667 11.4116 20.9375 12.2058 20.5859C13 20.2343 13 19.03 13 16.6215V14.7183C13 12.3098 13 11.1056 12.2058 10.7539C11.4116 10.4023 10.433 11.1732 8.47575 12.7151L7.26775 13.6667C6.08925 14.595 5.5 15.0593 5.5 15.6699C5.5 16.2805 6.08925 16.7448 7.26763 17.6732Z"
+                  fill="#656565"
+                />
+                <path
+                  d="M7.26763 17.6732L8.47575 18.6248C10.433 20.1667 11.4116 20.9375 12.2058 20.5859C13 20.2343 13 19.03 13 16.6215V14.7183C13 12.3098 13 11.1056 12.2058 10.7539C11.4116 10.4023 10.433 11.1732 8.47575 12.7151L7.26775 13.6667C6.08925 14.595 5.5 15.0593 5.5 15.6699C5.5 16.2805 6.08925 16.7448 7.26763 17.6732Z"
+                  stroke="#656565"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13 15.6699H25.5"
+                  stroke="#656565"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </Button>
             <Button
               transform="translateY(-50%)"
               onClick={nextImage}
               borderRadius={"50px"}
               variant="unstyled"
+              // border={"#656565 solid 1px "}
               color="white"
-              bg="rgba(0, 0, 0, 0.5)"
-              _hover={{ bg: "rgba(0, 0, 0, 0.8)" }}
+              bg={"#E6E6E6"}
+              // bg="rgba(0, 0, 0, 0.5)"
+              // _hover={{ bg: "#E6E6E6" }}
               zIndex="2"
             >
-              <ChevronRightIcon boxSize={[6, 7, 8]} />
+              <svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M23.7324 17.6732L22.5243 18.6248C20.567 20.1667 19.5884 20.9375 18.7942 20.5859C18 20.2343 18 19.03 18 16.6215V14.7183C18 12.3098 18 11.1056 18.7942 10.7539C19.5884 10.4023 20.567 11.1732 22.5243 12.7151L23.7323 13.6667C24.9108 14.595 25.5 15.0593 25.5 15.6699C25.5 16.2805 24.9107 16.7448 23.7324 17.6732Z"
+                  fill="#010101"
+                />
+                <path
+                  d="M23.7324 17.6732L22.5243 18.6248C20.567 20.1667 19.5884 20.9375 18.7942 20.5859C18 20.2343 18 19.03 18 16.6215V14.7183C18 12.3098 18 11.1056 18.7942 10.7539C19.5884 10.4023 20.567 11.1732 22.5243 12.7151L23.7323 13.6667C24.9108 14.595 25.5 15.0593 25.5 15.6699C25.5 16.2805 24.9107 16.7448 23.7324 17.6732Z"
+                  stroke="#010101"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 15.6699H5.5"
+                  stroke="#010101"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </Button>
           </HStack>
         </Box>
