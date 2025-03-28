@@ -1,12 +1,17 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { CustomButton } from "../../../components/CustomButton";
 import p1 from "../../../assets/p1.png";
 import p2 from "../../../assets/p2.png";
 import p3 from "../../../assets/p3.png";
 import { GoArrowUpRight } from "react-icons/go";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Platform = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Box p={["20px", "20px", "50px", "100px 150px"]} bg={"#fff"}>
       <Text
@@ -28,7 +33,12 @@ const Platform = () => {
         align={["center", "center", "start", "center"]}
         gap={["20px", "30px", "50px", "100px"]}
       >
-        <Box textAlign={["center", "center", "left", "left"]}>
+        <Box
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+          textAlign={["center", "center", "left", "left"]}
+        >
           <Text fontSize={["20px", "24px", "28px", "30px"]} fontWeight={"bold"}>
             Fast & Secure Transfers
           </Text>
@@ -55,7 +65,7 @@ const Platform = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
           <Image
             src={p1}
             w={["100%", "100%", "80%", "593px"]}
@@ -69,10 +79,14 @@ const Platform = () => {
         justifyContent={"center"}
         align={["center", "center", "start", "center"]}
         flexDir={["column", "column", "row", "row"]}
-        // align={["center", "center", "flex-start", "flex-start"]}
         gap={["20px", "30px", "50px", "100px"]}
       >
-        <Box order={["2", "2", "1", "1"]}>
+        <Box
+          order={["2", "2", "1", "1"]}
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+        >
           <Image
             src={p2}
             w={["100%", "100%", "80%", "593px"]}
@@ -82,6 +96,9 @@ const Platform = () => {
         <Box
           textAlign={["center", "center", "left", "left"]}
           order={["1", "1", "2", "2"]}
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-delay="400"
         >
           <Text fontSize={["20px", "24px", "28px", "30px"]} fontWeight={"bold"}>
             Competitive Exchange Rates
@@ -115,10 +132,14 @@ const Platform = () => {
         justifyContent={"center"}
         flexDir={["column", "column", "row", "row"]}
         align={["center", "center", "start", "center"]}
-        // align={["center", "center", "flex-start", "flex-start"]}
         gap={["20px", "30px", "50px", "100px"]}
       >
-        <Box textAlign={["center", "center", "left", "left"]}>
+        <Box
+          textAlign={["center", "center", "left", "left"]}
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+        >
           <Text fontSize={["20px", "24px", "28px", "30px"]} fontWeight={"bold"}>
             Multiple Payment Options
           </Text>
@@ -132,11 +153,7 @@ const Platform = () => {
             Get more value for your money with our market-leading exchange rates
             and low transfer fees.
           </Text>
-          <Box
-            // mx="auto"
-            mx={["auto", "auto", "initial", "initial"]}
-            // w={"fit-content"}
-          >
+          <Box mx={["auto", "auto", "initial", "initial"]}>
             <CustomButton
               mx={"auto"}
               btnText={"sign-in to get started"}
@@ -148,7 +165,7 @@ const Platform = () => {
             />
           </Box>
         </Box>
-        <Box>
+        <Box data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
           <Image
             src={p3}
             w={["100%", "100%", "80%", "593px"]}
