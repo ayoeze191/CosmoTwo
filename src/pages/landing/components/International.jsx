@@ -34,18 +34,30 @@ const International = () => {
       <Flex justify={"space-between"} align={"center"} mb={["20px","20px","20px","50px"]}>
         <motion.div
           ref={imageRef}
-          initial={{ opacity: 0 }} // Initially hidden
-          animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
-          transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: inView ? 1 : 0 }} 
+          whileHover={{ y: [0, -10, 0, -10, 0] }} 
+          transition={{
+            duration: 1.5, 
+            ease: "easeInOut", 
+            // repeat: Infinity, // 
+            // repeatType: "loop", // Continuous loop
+          }}
         >
           <Image src={audM} />
         </motion.div>
 
         <motion.div
           ref={imageRef}
-          initial={{ opacity: 0 }} // Initially hidden
-          animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
-          transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: inView ? 1 : 0 }} 
+          whileHover={{ y: [0, -10, 0, -10, 0] }} 
+          transition={{
+            duration: 1.5, 
+            ease: "easeInOut", 
+            // repeat: Infinity, // 
+            // repeatType: "loop", // Continuous loop
+          }}
         >
           <Image src={gbpM} />
         </motion.div>
@@ -58,33 +70,9 @@ const International = () => {
 
 
 
-      <motion.div
-        style={{
-          display: "inline-block",
-          textAlign: "center",
-          // fontSize: "24px",
-          fontWeight: "bold",
-        }}
 
-        // initial={{ opacity: 0 }}
-        // animate={{ opacity: 1 }}
-        // transition={{ duration: 3, repeat: Infinity, repeatType: "mirror" }} // Continuous fade in/out
-        // style={{ display: "inline-block", fontSize: "24px", fontWeight: "bold" }}
-      >
-        <motion.span
-          initial={{ x: -50 }} // Starts off-screen to the left
-          animate={{ x: 0 }} // Moves to its position
-          // exit={{ opacity: 0 }}
-          transition={{
-            duration: 2, // Slower movement (2 seconds)
-            ease: "easeInOut", // Smooth easing for responsive movement
-            repeat: Infinity,
-            // ease: "easeInOut",
-            repeatType: "mirror",
-          }}
-          style={{ display: "inline-block" }}
-        >
-          <Flex gap={["5px","5px","5px","10px"]} align={"center"}>
+       
+          <Flex gap={["5px","5px","5px","10px"]} align={"center"} justify={"center"}> 
             <Text
               fontSize={["18px", "25px", "30px", "40px"]}
               fontWeight={"bold"}
@@ -99,7 +87,7 @@ const International = () => {
               animate={{ x: 0, opacity: 1 }} // Moves to its position
               exit={{ opacity: 0 }}
               transition={{
-                duration: 2, // Slower movement (2 seconds)
+                duration:  1, // Slower movement (2 seconds)
                 repeat: Infinity,
                 ease: "easeInOut",
                 repeatType: "mirror",
@@ -115,18 +103,7 @@ const International = () => {
                 {words[textIndex]}
               </Text>
             </motion.span>
-          </Flex>
-        </motion.span>
-        <motion.span
-          initial={{ x: 50 }} // Starts off-screen to the right
-          animate={{ x: -50 }} // Moves to its position
-          transition={{
-            duration: 2, // Slower movement (2 seconds)
-            repeat: Infinity,
-            repeatType: "mirror",
-          }}
-          style={{ display: "inline-block" }}
-        >
+          
           <Text
             fontSize={["18px", "25px", "30px", "40px"]}
             fontWeight={"bold"}
@@ -134,30 +111,51 @@ const International = () => {
           >
             in these currencies
           </Text>
-        </motion.span>
-      </motion.div>
+          </Flex>
+
+
+
+
     <Flex justify={"space-between"} align={"center"} mt={["20px","20px","20px","50px"]}>
         <motion.div
           ref={imageRef}
-          initial={{ opacity: 0 }} // Initially hidden
-          animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
-          transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: inView ? 1 : 0 }} 
+          whileHover={{ y: [0, -10, 0, -10, 0] }} 
+          transition={{
+            duration: 1.5, 
+            ease: "easeInOut", 
+            // repeat: Infinity, // 
+            // repeatType: "loop", // Continuous loop
+          }}
         >
           <Image src={usdM} />
         </motion.div>
         <motion.div
           ref={imageRef}
-          initial={{ opacity: 0 }} // Initially hidden
-          animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
-          transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: inView ? 1 : 0 }} 
+          whileHover={{ y: [0, -10, 0, -10, 0] }} 
+          transition={{
+            duration: 1.5, 
+            ease: "easeInOut", 
+            // repeat: Infinity, // 
+            // repeatType: "loop", // Continuous loop
+          }}
         >
           <Image src={cadM} />
         </motion.div>
         <motion.div
-          ref={imageRef}
-          initial={{ opacity: 0 }} // Initially hidden
-          animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view
-          transition={{ duration: 2, ease: "easeInOut" }} // Smooth fade-in transition
+           ref={imageRef}
+           initial={{ opacity: 0 }} 
+           animate={{ opacity: inView ? 1 : 0 }} 
+           whileHover={{ y: [0, -10, 0, -10, 0] }} 
+           transition={{
+             duration: 1.5, 
+             ease: "easeInOut", 
+            //  repeat: Infinity, // 
+             // repeatType: "loop", // Continuous loop
+           }}
         >
           <Image src={nzdM} />
         </motion.div>
