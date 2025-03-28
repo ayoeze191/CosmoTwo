@@ -223,15 +223,18 @@ const Country = () => {
             transition="transform 0.5s ease-in-out"
             transform={`translateX(-${currentIndex * 85}%)`}
             // transform={`translateX(-${currentIndex * cardWidthRef.current}px)`}
-            gap="30px"
+            gap={["20px", "25px", "30px", "40px"]}
           >
             {carouselData.map((item, index) => (
               <Box
                 key={index}
+                p={["20px", "30px", "40px", "50px"]}
+                gap={["15px", "20px", "25px", "30px", "50px"]}
+                fontSize={["14px", "16px", "18px", "20px"]}
                 // width={["300px", "350px", "400px", "400px"]}
-                height={["400px", "400px", "638px"]}
+                height={["400px", "400px", "400px", "638px"]}
                 display={"flex"}
-                gap={"50px"}
+                // gap={"50px"}
                 flexDirection={"column"}
                 justifyContent={"center"}
                 p="100px 50px"
