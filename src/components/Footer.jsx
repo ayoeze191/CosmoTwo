@@ -32,16 +32,7 @@ const Footer = () => {
         justify={["center", "center", "flex-end"]}
         mb={["20px", "30px", "50px"]}
         direction={["column", "column", "row"]}
-      >
-        <Box textAlign={["center", "center", "left"]}>
-          <Text fontSize={["14px", "16px", "18px"]} lineHeight={"18px"}>
-            We are a proud member of
-          </Text>
-          <Flex justify={"center"} mt={["10px", "15px", "20px"]}>
-            <Image src={pm} h={["30px", "40px", "130px"]} />
-          </Flex>
-        </Box>
-      </Flex>
+      ></Flex>
 
       <Divider />
       <Flex
@@ -207,6 +198,19 @@ const Footer = () => {
             <Image src={linked} h={"40px"} />
             <Image src={tube} h={"40px"} />
           </Flex>
+          <Box textAlign={["center", "center", "left"]}>
+            <Text
+              fontSize={["14px", "16px", "18px"]}
+              mt={"10"}
+              textAlign={"center"}
+              lineHeight={"18px"}
+            >
+              We are a proud member of
+            </Text>
+            <Flex justify={"center"} mt={["10px", "15px", "20px"]}>
+              <Image src={pm} h={["30px", "40px", "130px"]} />
+            </Flex>
+          </Box>
         </Box>
       </Flex>
       <Divider />
